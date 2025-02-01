@@ -1,7 +1,8 @@
 export default function Home() {
   return (
     <section>
-      hello rethex portfolio
+      <p className="text-[32px] font-bold">Hello return hex!</p>
+      portfolio site
     </section>
   );
 }
