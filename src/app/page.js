@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <section>
       <p className="text-[32px] font-bold">Hello return hex!</p>
-      portfolio site
+      portfolio site rrrrr
     </section>
   );
 }
