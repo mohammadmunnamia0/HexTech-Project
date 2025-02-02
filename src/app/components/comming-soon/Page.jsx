@@ -44,15 +44,15 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-6">
        <section>
-        <Image src={logo} alt="returnhex_trans" className='h-[100px] w-auto' />
+        <Image src={logo} alt="returnhex_trans" className='h-auto sm:h-[100px] w-auto' />
         </section> 
-      <h1 className="text-5xl font-bold mb-4">Retrunhex is Coming Soon</h1>
-      <p className="text-lg mb-6 text-gray-400">We're working hard to launch soon. Stay tuned!</p>
-      <div className="flex space-x-4 text-center text-xl">
+      <h1 className="text-2xl sm:text-5xl font-bold mb-4">Retrunhex is Coming Soon</h1>
+      <p className="text-lg sm:text-lg mb-6 text-gray-400">We're working hard to launch soon. Stay tuned!</p>
+      <div className="flex sm:space-x-4 sm:text-center text-xl">
         {Object.keys(timeLeft).length ? (
           Object.entries(timeLeft).map(([unit, value]) => (
-            <div key={unit} className="bg-gray-500 p-4 rounded-lg w-24">
-              <span className="text-3xl font-bold">{value}</span>
+            <div key={unit} className="bg-gray-500 p-1 w-auto sm:p-4 rounded-lg sm:w-24 m-1">
+              <span className="text-lg sm:text-3xl font-bold">{value}</span>
               <div className="text-sm uppercase text-white font-bold">{unit}</div>
             </div>
           ))
