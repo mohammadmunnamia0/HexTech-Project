@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <style>
+    .animated-cart {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+  <g class="animated-cart">
+    <!-- Shopping cart with a "404" sign -->
+    <path d="M150,250 h200" stroke="#000000" stroke-width="8" fill="none"/>
+    <path d="M175,300 h150" stroke="#000000" stroke-width="8" fill="none"/>
+    <circle cx="200" cy="350" r="20" fill="#000000"/>
+    <circle cx="300" cy="350" r="20" fill="#000000"/>
+    <text x="250" y="200" font-size="72" fill="#000000" text-anchor="middle" font-family="Arial">404</text>
+  </g>
+</svg>
