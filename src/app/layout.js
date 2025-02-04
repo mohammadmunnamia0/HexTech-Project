@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Return hex",
-  description: "return hax is a software company",
+  description: "Return Hex is a software company specializing in cutting-edge technology solutions. They provide innovative software development, AI, and cloud services to businesses worldwide",
 };
 
 export default function RootLayout({ children }) {
