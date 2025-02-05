@@ -1,44 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/return_hex.png";
-export default function Navbar() {
+import logo from "@/assets/return_hex.png";
+const Navbar = () => {
     return (
-        <nav className="bg-gray-900 text-white shadow-lg">
+        <header className="bg-gray-900 text-white shadow-lg">
             <div className="container h-24 flex items-center mx-auto justify-center">
                 <div className="flex items-center justify-evenly w-full">
-                    <div>
+                    <section>
                         <Image src={logo}
                             width={200}
                             height={409}
                             alt="Company Logo" />
-                    </div>
-                    <div className="flex items-center">
-
+                    </section>
+                    <section className="flex items-center">
                         <div className="flex space-x-4">
-                            <Link href="/home">
-                                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                                    Home
-                                </p>
-                            </Link>
-                            <Link href="/about">
-                                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                                    About
-                                </p>
-                            </Link>
-                            <Link href="/services">
-                                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                                    Services
-                                </p>
-                            </Link>
-                            <Link href="/contact">
-                                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                                    Contact
-                                </p>
-                            </Link>
+                            <Link href="/home"><nav className="nav-items">Home</nav></Link>
+                            <Link href="/about"><nav className="nav-items"> About</nav> </Link>
+                            <Link href="/services"> <nav className="nav-items">Services</nav></Link>
+                            <Link href="/contact"><nav className="nav-items">Contact</nav></Link>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </nav>
+        </header>
     );
 }
+
+export default Navbar
