@@ -5,7 +5,7 @@ import { IoLogoGithub } from "react-icons/io";
 import Image from 'next/image';
 import logo from '../../public/return_hex.png';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="dark:bg-gray-500">
       <div className="mx-auto w-full lg:max-w-screen-xl p-4 py-6 lg:py-8 ">
@@ -72,9 +72,11 @@ export default function Footer() {
             <Link href="/" className=" hover:text-black">
               <FaDribbble />
             </Link>
-          </div>
-        </div>
-      </div>
+          </section>
+        </section>
+      </section>
     </footer>
   );
 }
+
+export default Footer

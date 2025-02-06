@@ -6,21 +6,21 @@ export const metadata = {
     description: "Sorry, the page you are looking for does not exist.",
 };
 
-export default function NotFound() {
+const NotFound = () => {
     return (
-        <div className="flex items-center justify-center p-42 mb-10">
-            <div className="w-full max-w-3xl text-center space-y-8">
-                <div className="relative w-full h-64 md:h-80">
+        <section className="flex items-center justify-center p-42 mb-10">
+            <section className="w-full max-w-3xl text-center space-y-8">
+                <section className="relative w-full h-64 md:h-80">
                     <Image
                         src={errorImage}
                         alt="404 illustration"
-                        fill
+                        fillF
                         priority
                         className="object-contain"
                     />
-                </div>
+                </section>
 
-                <div className="space-y-4">
+                <section className="space-y-4">
                     <h1 className="text-4xl md:text-5xl font-bold">
                         Oops! Page Not Found
                     </h1>
@@ -29,9 +29,9 @@ export default function NotFound() {
                         We couldn&apos;t find the page you&apos;re looking for. The item
                         might have been moved or removed.
                     </p>
-                </div>
+                </section>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <section className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button
                         asChild
                         size="lg"
@@ -39,8 +39,10 @@ export default function NotFound() {
                     >
                         <Link href="/">Back to Home</Link>
                     </button>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+        </section>
     );
 }
+
+export default NotFound

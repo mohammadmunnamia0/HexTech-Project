@@ -64,7 +64,7 @@ const Navbar = () => {
                                 Menu
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </nav>
             {/* Navbar ends*/}
@@ -118,3 +118,5 @@ const Navbar = () => {
     );
 };
 export default Navbar;
+
+export default Navbar

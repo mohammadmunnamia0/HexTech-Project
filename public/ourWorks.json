@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "logo": "https://www.svgrepo.com/show/501060/web.svg",
+        "title": "Website development",
+        "description": "Our creative and talented team of designers as well as skilled technical developers will build your site to order. We have experience creating web solutions for"
+    },
+    {
+        "id": 2,
+        "logo": "https://www.svgrepo.com/show/533117/mobile-alt-1.svg",
+        "title": "Mobile App development",
+        "description": "Our engineers continue to build first-class native iOS and Android apps as well as Progressive Web Apps using React Native, Flutter, or Ionic. We follow industry best"
+    },
+    {
+        "id": 3,
+        "logo": "http://svgrepo.com/show/425558/ecommerce-website-commerce-and-shopping-2.svg",
+        "title": "E-Commerce Web development",
+        "description": "We can bring your online business to the next level by creating a high-quality Shopify, Big Commerce or e-Commerce online stores for ecommerce solutions."
+    },
+    {
+        "id": 4,
+        "logo": "https://www.svgrepo.com/show/340122/datastore.svg",
+        "title": "Backend development",
+        "description": "Our creative and talented team of designers as well as skilled technical developers will build your site to order. We have experience creating web solutions for"
+    },
+    {
+        "id": 5,
+        "logo": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
+        "title": "UI-UX Design",
+        "description": "Let us translate your concept into a great user experience and highly usable user interface, whether it’s a web, mobile application or a corporate"
+    },
+    {
+        "id": 6,
+        "logo": "https://www.svgrepo.com/show/486733/maintenance-warning.svg",
+        "title": "Long term maintenance",
+        "description": "After 90 (ninety) days of products delivery we provide long term maintenance and support service as per clients requirement if both of the part"
+    }
+]
