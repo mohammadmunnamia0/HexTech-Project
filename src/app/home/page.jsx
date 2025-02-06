@@ -1,8 +1,15 @@
+import Hero from "@/app/home/sections/Hero"
+import OurWorks from "./sections/OurWorks"
+import ContactPage from "../contact/page"
 
-export default function HomePage() {
+const HomePage = () => {
     return (
-        <div className="text-center mt-10 mb-10 text-5xl">
-            This is Home page
-        </div>
+        <>
+            <Hero />
+            <OurWorks />
+            <ContactPage />
+        </>
     )
 }
+
+export default HomePage

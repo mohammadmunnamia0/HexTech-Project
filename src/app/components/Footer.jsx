@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaDribbble } from 'react-icons/fa6';
 import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 import Image from 'next/image';
-import logo from '../../public/return_hex.png';
+import logo from '../../assets/return_hex.png';
 
 export default function Footer() {
   return (

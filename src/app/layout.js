@@ -18,7 +18,7 @@ export const metadata = {
   description: "Return Hex is a software company specializing in cutting-edge technology solutions. They provide innovative software development, AI, and cloud services to businesses worldwide",
 };
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body
@@ -33,3 +33,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout

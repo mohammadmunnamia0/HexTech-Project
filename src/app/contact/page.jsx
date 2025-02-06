@@ -1,9 +1,6 @@
 export default function ContactPage() {
-
-    
     const inputClass = "w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400";
     const labelClass = "block text-gray-700 text-sm font-bold mb-2";
-
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 p-6 px-20">
 
