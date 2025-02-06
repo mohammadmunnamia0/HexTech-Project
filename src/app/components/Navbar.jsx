@@ -11,10 +11,10 @@ import logo from '../../assets/return_hex.png';
 
 
 const Navbar = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const toggleSidebar = () => {
-        setSidebarOpen(!sidebarOpen);
-    };
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
     return (
         <div>
