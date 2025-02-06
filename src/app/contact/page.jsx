@@ -29,8 +29,7 @@ export default function ContactPage() {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"/>
           </div>
 
           <div className="mb-4">
@@ -40,8 +39,7 @@ export default function ContactPage() {
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"/>
           </div>
 
           <div className="mb-4">
@@ -51,14 +49,13 @@ export default function ContactPage() {
             <textarea
               rows="4"
               placeholder="Your Message"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            ></textarea>
+              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </textarea>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition"
-          >
+            className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
             Send Message
           </button>
         </form>
