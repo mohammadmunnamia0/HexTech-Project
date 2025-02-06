@@ -3,9 +3,9 @@ import { FaFacebookF, FaTwitter, FaDribbble } from 'react-icons/fa6';
 import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 import Image from 'next/image';
-import logo from '../../public/return_hex.png';
+import logo from '../../assets/return_hex.png';
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="dark:bg-gray-500">
       <div className="mx-auto w-full lg:max-w-screen-xl p-4 py-6 lg:py-8 ">
@@ -72,11 +72,9 @@ const Footer = () => {
             <Link href="/" className=" hover:text-black">
               <FaDribbble />
             </Link>
-          </section>
-        </section>
-      </section>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
-
-export default Footer

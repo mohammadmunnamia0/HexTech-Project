@@ -7,7 +7,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { FaFacebookF, FaYoutube } from "react-icons/fa6";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import logo from '../../public/return_hex.png';
+import logo from '../../assets/return_hex.png';
 
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
             <nav className="flex justify-between items-center lg:h-24 h-20 bg-gray-500 text-white">
                 {/* Logo */}
                 <div className="lg:text-4xl text-2xl font-bold lg:px-10 px-5">
-                    <Image src={logo} alt="Logo" width={250} height={20}/>
+                    <Image src={logo} alt="Logo" width={250} height={20} />
                 </div>
                 <div className="w-full flex justify-end h-full">
                     <div className="flex lg:w-1/2 w-full justify-between">
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 Menu
                             </p>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </nav>
             {/* Navbar ends*/}
@@ -118,5 +118,3 @@ const Navbar = () => {
     );
 };
 export default Navbar;
-
-export default Navbar
