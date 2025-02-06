@@ -1,6 +1,9 @@
 export default function ContactPage() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-100 p-6 px-20">
+
+    {/* map */}
+
       <div className="w-full md:w-1/2 h-[550px]">
         <iframe
           className="w-full h-full rounded-lg shadow-lg"
@@ -11,6 +14,8 @@ export default function ContactPage() {
         ></iframe>
       </div>
 
+
+    {/* contact */}
       <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg mt-6 md:mt-0 md:ml-6">
         <h1 className="text-4xl font-bold mb-6 text-gray-800 text-center">
           Contact Us
