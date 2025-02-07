@@ -11,7 +11,6 @@ const Navbar = () => {
         { name: 'About', href: '/about' },
         { name: 'Careers', href: '/' },
         { name: 'Blog', href: '/' },
-        { name: 'Contact', href: '/contact' },
     ];
     return (
         <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
@@ -36,6 +35,14 @@ const Navbar = () => {
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-6s00 group-hover:w-full"></span>
                                 </div>
                             ))}
+                            <Link href="/contact" className="relative inline-block text-base group">
+                                <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-900 rounded-md group-hover:text-white">
+                                    <span className="absolute inset-0 w-full h-full px-4 py-2 rounded-md bg-gray-50"></span>
+                                    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                                    <span className="relative">Contact Us</span>
+                                </span>
+                                <span className="absolute bottom-0 right-0 w-full h-10 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-md group-hover:mb-0 group-hover:mr-0"></span>
+                            </Link>
                         </div>
                     </div>
                     <div className="md:hidden">
