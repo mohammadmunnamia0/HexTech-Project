@@ -21,10 +21,8 @@ const OurWorks = () => {
             {/* Title + Subtitle */}
             <h2 className='title'>Our Software Company Works</h2>
             <h4 className='subtitle'>
-                Return hex, a custom software development & consulting company focusing on web, mobile, desktop & embedded software development.
-                It’s committed to meeting the highest ethical standards of work by implementing web & mobile solutions without compromising on quality & functionality.
+                Return hex, a custom software development & consulting company focusing  on web, mobile, desktop <br /> & embedded software development. 
             </h4>
-
             {/* Our Works Slider */}
             <section className='mb-5'>
                 <Swiper
