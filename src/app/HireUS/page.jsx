@@ -39,9 +39,7 @@ export default function HireUs() {
           <p className="text-gray-700">returnhex@gmail.com | +880188888888</p>
 
           <h2 className="text-lg font-semibold mt-6">Follow Us</h2>
-          <div className=" flex justify-center items-center">
-            <img src="https://cdn.dribbble.com/users/43718/screenshots/1137881/loadinganimation2.gif" alt="" />
-          </div>
+        
           <div className="flex gap-4 text-xl mt-2">
             <Link href="/" className="hover:text-black">
               <FaFacebookF />
@@ -58,6 +56,9 @@ export default function HireUs() {
             <Link href="/" className="hover:text-black">
               <FaDribbble />
             </Link>
+          </div>
+          <div className=" flex justify-center items-center mt-6">
+            <img src="https://cdn.dribbble.com/users/43718/screenshots/1137881/loadinganimation2.gif" alt="" />
           </div>
 
           <p className="text-lg mt-12 text-gray-700">

@@ -1,78 +1,101 @@
-import Link from 'next/link';
-import { FaFacebookF, FaTwitter, FaDribbble } from 'react-icons/fa6';
+"use client";
+import Link from "next/link";
+import { FaFacebookF, FaTwitter, FaDribbble } from "react-icons/fa6";
 import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
-import Image from 'next/image';
-import logo from '../../assets/return_hex.png';
-
 export default function Footer() {
   return (
-    <footer className="dark:bg-gray-500">
-      <div className="mx-auto w-full lg:max-w-screen-xl p-4 py-6 lg:py-8 ">
-        <div className="md:flex md:justify-between">
-          <div className="text-white grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase">Resources</h2>
-              <ul className=" font-medium">
-                <li className="mb-4">
-                  <Link href="https://flowbite.com/" className="hover:underline">Flowbite</Link>
-                </li>
-                <li>
-                  <Link href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold  uppercase">Follow us</h2>
-              <ul className=" font-medium">
-                <li className="mb-4">
-                  <Link href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</Link>
-                </li>
-                <li>
-                  <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold  uppercase">Legal</h2>
-              <ul className=" font-medium">
-                <li className="mb-4">
-                  <Link href="#" className="hover:underline">Privacy Policy</Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="#" className="hover:underline">Terms &amp; Conditions</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mb-6 md:mb-0 ">
-            <Link href="https://flowbite.com/" className="flex items-center">
-              <Image src={logo} alt="Logo" width={250} height={20} />
-            </Link>
+    <footer className="bg-black text-white py-12 px-8">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
+        {/* Left Section */}
+        <div className="mb-8 md:mb-0">
+          <h2 className="text-xl font-bold">
+            Contact us : returnhex@gmail.com
+          </h2>
+          <div className="bg-slate-100 border-y-gray-200">
+            <img src="/src/assets/return_hex_trans.png"  alt="" />
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-white sm:text-center">© 2025 <a href="https://returnhex.com/" className="hover:underline">returnHex</a>. All Rights Reserved.
-          </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0 text-white gap-6 text-xl">
-            <Link href="/" className=" hover:text-black">
-              <FaFacebookF />
-              {/* <FaTwitter /> */}
-            </Link>
-            <Link href="/" className=" hover:text-black">
-              <FaTwitter />
-            </Link>
-            <Link href="/" className=" hover:text-black">
-              <BsDiscord />
-            </Link>
-            <Link href="/" className=" hover:text-black">
-              <IoLogoGithub />
-            </Link>
-            <Link href="/" className=" hover:text-black">
-              <FaDribbble />
-            </Link>
+
+        {/* Right Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Platform */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Platform</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/">About</Link>
+              </li>
+              <li>
+                <Link href="/">Features</Link>
+              </li>
+              <li>
+                <Link href="/">Pricing & Plans</Link>
+              </li>
+              <li>
+                <Link href="/">Contact</Link>
+              </li>
+            </ul>
           </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Resources</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/">Account</Link>
+              </li>
+              <li>
+                <Link href="/">Tools</Link>
+              </li>
+              <li>
+                <Link href="/">Newsletter</Link>
+              </li>
+              <li>
+                <Link href="/">FAQ</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legals */}
+          <div>
+            <h3 className="font-semibold text-lg mb-3">Legals</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <Link href="/">Guides</Link>
+              </li>
+              <li>
+                <Link href="/">Terms & Conditions</Link>
+              </li>
+              <li>
+                <Link href="/">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/">Licensing</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-gray-800 mt-8 pt-6 flex items-center">
+      <p className="text-white text-2xl">Follow us on : </p>
+        <div className="flex space-x-4 text-lg">
+          <Link href="/" className="text-blue-500 ml-5 hover:text-gray-400">
+            <FaFacebookF />
+          </Link>
+          <Link href="/" className="text-blue-500 hover:text-black">
+            <FaTwitter />
+          </Link>
+          <Link href="/" className="text-blue-400 hover:text-black">
+            <BsDiscord />
+          </Link>
+          <Link href="/" className=" hover:text-black">
+            <IoLogoGithub />
+          </Link>
+        </div>
+        <div>
+          <img src="" alt="" />
         </div>
       </div>
     </footer>
