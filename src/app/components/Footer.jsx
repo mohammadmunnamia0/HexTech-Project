@@ -12,8 +12,11 @@ export default function Footer() {
           <h2 className="text-xl font-bold">
             Get in touch : returnhex@gmail.com
           </h2>
-          <div className="bg-slate-100 border-y-gray-200">
-            <img src="/src/assets/return_hex_trans.png"  alt="" />
+          <div className="flex justify-center items-center  bg-black">
+            <h1 className="text-6xl font-bold text-white glow rounded-xl px-6 py-3 relative">
+              returnhex
+              <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-xl opacity-75 animate-pulse"></span>
+            </h1>
           </div>
         </div>
 
@@ -79,7 +82,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-800 mt-8 pt-6 flex items-center">
-      <p className="text-white text-2xl">Follow us on : </p>
+        <p className="text-white text-2xl">Follow us on : </p>
         <div className="flex space-x-4 text-lg">
           <Link href="/" className="text-blue-500 ml-5 hover:text-gray-400">
             <FaFacebookF />
