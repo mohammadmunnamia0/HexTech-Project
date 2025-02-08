@@ -5,8 +5,8 @@ import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 px-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
+    <footer className="bg-black text-white py-12 px-8 ">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between ">
         {/* Left Section */}
         <div className="mb-8 md:mb-0">
           <h2 className="text-xl font-bold">
@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex justify-center items-center  bg-black">
             <h1 className="text-6xl font-bold text-white glow rounded-xl px-6 py-3 relative">
               returnhex
-              <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-xl opacity-75 animate-pulse"></span>
+              <span className="absolute inset-0 rounded-xl bg-gradient-to-r  from-gray-300 via-gray-500 to-gray-400  blur-xl opacity-75 animate-pulse"></span>
             </h1>
           </div>
         </div>
