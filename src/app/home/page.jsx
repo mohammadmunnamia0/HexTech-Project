@@ -3,6 +3,7 @@ import OurWorks from "./sections/OurWorks"
 import ContactPage from "../contact/page"
 import DevelopmentProcess from "./sections/DevelopmentProcess"
 import HireUs from "../HireUS/page"
+import ClientReview from './sections/ClientReview';
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <OurWorks />
             <DevelopmentProcess/>
             <HireUs/>
+            <ClientReview/>
             <ContactPage />
         </>
     )
