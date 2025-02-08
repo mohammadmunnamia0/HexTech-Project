@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Left Section */}
         <div className="mb-8 md:mb-0">
           <h2 className="text-xl font-bold">
-            Contact us : returnhex@gmail.com
+            Get in touch : returnhex@gmail.com
           </h2>
           <div className="bg-slate-100 border-y-gray-200">
             <img src="/src/assets/return_hex_trans.png"  alt="" />
