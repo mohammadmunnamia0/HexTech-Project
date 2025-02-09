@@ -1,101 +1,120 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/autoplay";
+
 const ClientReview = () => {
-    const works = [
+    const reviews = [
         {
             "id": 1,
-            "clientName": "John Doe",
+            "clientName": "Rakib",
             "clientImage": "https://randomuser.me/api/portraits/men/1.jpg",
-            "review": "Great experience working with this team! They delivered exactly what we needed for our website."
+            "review": "I used to dread doing my taxes every year, but pagedone has made the process so much simpler and stress-free.",
+            "role": "Product Designer"
         },
         {
             "id": 2,
-            "clientName": "Sarah Smith",
+            "clientName": "Tonmoy",
             "clientImage": "https://randomuser.me/api/portraits/women/2.jpg",
-            "review": "Their mobile app development services exceeded our expectations. Highly recommend!"
+            "review": "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            "role": "CEO"
         },
         {
             "id": 3,
-            "clientName": "Michael Brown",
-            "clientImage": "https://randomuser.me/api/portraits/men/3.jpg",
-            "review": "Professional and skilled developers! Our eCommerce store turned out amazing."
+            "clientName": "Linkon",
+            "clientImage": "https://randomuser.me/api/portraits/women/2.jpg",
+            "review": "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            "role": "CEO"
         },
         {
             "id": 4,
-            "clientName": "Emily White",
-            "clientImage": "https://randomuser.me/api/portraits/women/4.jpg",
-            "review": "Fantastic UI/UX design! The team really understood our vision."
+            "clientName": "Munna",
+            "clientImage": "https://randomuser.me/api/portraits/women/2.jpg",
+            "review": "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            "role": "CEO"
         },
         {
             "id": 5,
-            "clientName": "David Wilson",
-            "clientImage": "https://randomuser.me/api/portraits/men/5.jpg",
-            "review": "Reliable long-term maintenance service. Always available when needed!"
+            "clientName": "Fahim",
+            "clientImage": "https://randomuser.me/api/portraits/women/2.jpg",
+            "review": "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            "role": "CEO"
         }
-    ]
-        
+    ];
 
     return (
-        <section className="container mb-12">
-            {/* Title + Subtitle */}
-            <h2 className="title">What Our Clients Say</h2>
-            <h4 className="subtitle">
-                Hear from our satisfied clients about their experience working with us. <br />
-                We take pride in delivering top-notch software solutions.
-            </h4>
-            {/* Our Works Slider */}
-            <section className="mb-5">
+        <section className="container lg:flex mx-auto py-24 px-4 sm:px-6 lg:px-8">
+            <div className="text-center lg:p-12">
+                <span className="text-sm text-gray-500 font-medium block text-left mb-4">Testimonial</span>
+                <h2 className="text-4xl font-bold text-gray-900 leading-tight text-left mb-16">
+                    23k+ Customers gave their
+                    <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-500 to-gray-200"> Feedback</span>
+                </h2>
+                <div className="flex gap-6 mt-6">
+                    <button className="swiper-button-prev-custom flex justify-center items-center border border-gray-600 w-10 h-10 rounded-lg hover:bg-black hover:text-white">
+                        ←
+                    </button>
+                    <button className="swiper-button-next-custom flex justify-center items-center border border-gray-600 w-10 h-10 rounded-lg hover:bg-black hover:text-white">
+                        →
+                    </button>
+                </div>
+            </div>
+
+            <div className="mt-5 lg:w-[60%] mx-auto p-10 border border-gray-300 rounded-2xl shadow-lg">
                 <Swiper
                     autoplay={{
-                        delay: 3000, // 3 seconds per slide
+                        delay: 3000,
                         disableOnInteraction: false,
                     }}
-                    pagination={{
-                        clickable: true,
+                    pagination={{ clickable: true }}
+                    navigation={{
+                        nextEl: ".swiper-button-next-custom",
+                        prevEl: ".swiper-button-prev-custom",
                     }}
+                    loop={true}
                     breakpoints={{
+                        0: {
+                            slidesPerView: 1, 
+                            spaceBetween: 20,
+                        },
                         768: {
+                            slidesPerView: 2, 
+                            spaceBetween: 30,
+                        },
+                        1024: {
                             slidesPerView: 2,
                             spaceBetween: 40,
                         },
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 50,
-                        },
                     }}
-                    modules={[Pagination, Autoplay]}
+                    modules={[Pagination, Navigation, Autoplay]}
                     className="mySwiper"
                 >
-                    {works.map((work, index) => (
-                        <SwiperSlide key={work?.id}>
-                            <article
-                                className={`duration-300 h-full p-3 md:py-5 md:px-8 shadow-lg max-w-4xl mx-auto rounded-2xl cursor-pointer
-                                  ${index % 2 === 0
-                                        ? "border border-primary"
-                                        : " bg-zinc-100"
-                                    }`}
-                            >
-                                <img
-                                    className="w-12 h-12 rounded-full object-cover mx-auto"
-                                    src={work?.clientImage}
-                                    alt={work?.title}
-                                />
-                                <h5 className="my-3 lg:my-5 text-center text-lg md:text-xl lg:text-2xl font-semibold">
-                                    {work?.clientName}
-                                </h5>
-                                <p className="text-zinc-500 text-center">{work?.review}</p>
-                            </article>
+                    {reviews.map((review) => (
+                        <SwiperSlide key={review.id} className="group bg-white p-6 rounded-2xl border border-gray-300 hover:border-black transition-all duration-500">
+                            <div className="flex items-center gap-4 mb-4">
+                                <img className="w-12 h-12 rounded-full object-cover" src={review.clientImage} alt={review.clientName} />
+                                <div>
+                                    <h5 className="text-lg font-medium text-gray-900">{review.clientName}</h5>
+                                    <span className="text-sm text-gray-500">{review.role}</span>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-1 mb-4 text-amber-500">
+                                {[...Array(5)].map((_, i) => (
+                                    <svg key={i} className="w-5 h-5" viewBox="0 0 18 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.103 1.317c.367-.743 1.427-.743 1.794 0l1.81 3.667a1 1 0 00.753.547l4.046.588c.82.12 1.147 1.128.553 1.707l-2.928 2.854a1 1 0 00-.286.885l.691 4.03c.14.817-.717 1.44-1.451 1.055l-3.619-1.902a1 1 0 00-.932 0L4.092 16.43c-.734.385-1.59-.238-1.451-1.055l.691-4.03a1 1 0 00-.286-.885L.117 7.606c-.594-.579-.267-1.587.553-1.707l4.046-.588a1 1 0 00.753-.547l1.81-3.667z" />
+                                    </svg>
+                                ))}
+                            </div>
+                            <p className="text-sm text-gray-500 leading-6">{review.review}</p>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </section>
+            </div>
         </section>
     );
 };
-
 
 export default ClientReview;
