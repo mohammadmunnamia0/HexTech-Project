@@ -29,9 +29,9 @@ export default function DevelopmentProcess() {
         },
     ];
     return (
-        <section className="py-20">
+        <section className="py-20 lg:mt-12 mt-5 lg:mb-12 mb-5">
             <div className="container">
-                <h2 className="text-4xl font-bold text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-semibold text-center lg:mb-16 mb:5">
                     Our Development Process
                 </h2>
                 <div className="grid md:grid-cols-4 gap-8">
