@@ -1,9 +1,12 @@
-const AboutPage = () => {
-  return (
-    <div className="text-center mt-10 mb-10 text-5xl">
-      This is About Page
-    </div>
-  )
-}
+import OurTeam from "./OurTeam/page"
 
-export default AboutPage
+const page = () => {
+  return (
+    <div>
+  
+      <OurTeam/>
+    </div>
+  );
+};
+
+export default page;

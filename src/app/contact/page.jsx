@@ -47,7 +47,6 @@ export default function ContactPage() {
             >
               Send Message
             </button>
-         
           </form>
         </div>
 

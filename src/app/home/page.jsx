@@ -4,6 +4,8 @@ import DevelopmentProcess from "./sections/DevelopmentProcess";
 import HireUs from "../HireUS/page";
 import Services from './sections/Services';
 import ClientReview from "./sections/ClientReview";
+import Technology from "./sections/Technology";
+
 
 const HomePage = () => {
     return (
@@ -11,6 +13,7 @@ const HomePage = () => {
             <Hero />
             <Services />
             <DevelopmentProcess />
+            <Technology/>
             <HireUs />
             <ClientReview />
             <ContactPage />
