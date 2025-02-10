@@ -62,7 +62,7 @@ export default function HireUs() {
             <div>
             <img className="flex justify-center items-center"
                src="https://cdn-icons-gif.flaticon.com/16104/16104326.gif"
-              alt=""
+              alt="ss"
             />
             </div>
           </div>

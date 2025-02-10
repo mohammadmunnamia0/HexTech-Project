@@ -98,7 +98,7 @@ export default function Footer() {
           </Link>
         </div>
         <div>
-          <img src="" alt="" />
+          <img src="/" alt="s" />
         </div>
       </div>
     </footer>
