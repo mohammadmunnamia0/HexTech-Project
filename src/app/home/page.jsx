@@ -1,9 +1,10 @@
-import Hero from "@/app/home/sections/Hero";
+import Hero from './sections/Hero';
 import ContactPage from "../contact/page";
 import DevelopmentProcess from "./sections/DevelopmentProcess";
 import HireUs from "../HireUS/page";
 import Services from './sections/Services';
 import ClientReview from "./sections/ClientReview";
+import Blog from './sections/Blog';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <DevelopmentProcess />
             <HireUs />
             <ClientReview />
+            <Blog/>
             <ContactPage />
         </>
     )
