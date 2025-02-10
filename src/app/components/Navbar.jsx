@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navItems = [
         { name: 'Home', href: '/home' },
-        { name: 'Services', href: '/services' },
+        { name: 'HireUs', href: '/HireUS' },
         { name: 'About', href: '/about' },
         { name: 'Careers', href: '/' },
         { name: 'Blog', href: '/' },
@@ -35,7 +35,7 @@ const Navbar = () => {
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black transition-all duration-6s00 group-hover:w-full"></span>
                                 </div>
                             ))}
-                            <Link href="/contact" className="relative inline-block text-base group">
+                            <Link href="/home" className="relative inline-block text-base group">
                                 <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-900 rounded-md group-hover:text-white">
                                     <span className="absolute inset-0 w-full h-full px-4 py-2 rounded-md bg-gray-50"></span>
                                     <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
