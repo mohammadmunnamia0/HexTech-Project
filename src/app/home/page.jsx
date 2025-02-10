@@ -5,6 +5,7 @@ import HireUs from "../HireUS/page";
 import Services from './sections/Services';
 import ClientReview from "./sections/ClientReview";
 import Blog from './sections/Blog';
+import Project from './sections/Project';
 
 const HomePage = () => {
     return (
@@ -12,6 +13,7 @@ const HomePage = () => {
             <Hero />
             <Services />
             <DevelopmentProcess />
+            <Project/>
             <HireUs />
             <ClientReview />
             <Blog/>
