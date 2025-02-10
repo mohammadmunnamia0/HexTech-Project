@@ -1,3 +1,4 @@
+
 import Hero from './sections/Hero';
 import ContactPage from "../contact/page";
 import DevelopmentProcess from "./sections/DevelopmentProcess";
@@ -6,6 +7,7 @@ import Services from './sections/Services';
 import ClientReview from "./sections/ClientReview";
 import Blog from './sections/Blog';
 import Project from './sections/Project';
+import TechStack from './sections/TechStack';
 
 const HomePage = () => {
     return (
@@ -13,10 +15,11 @@ const HomePage = () => {
             <Hero />
             <Services />
             <DevelopmentProcess />
-            <Project/>
+            <Project />
+            <TechStack />
             <HireUs />
             <ClientReview />
-            <Blog/>
+            <Blog />
             <ContactPage />
         </>
     )

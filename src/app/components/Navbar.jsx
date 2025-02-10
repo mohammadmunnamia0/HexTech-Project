@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-center space-x-8">
                             {navItems.map((item) => (
-                                <div className="relative group">
+                                <div className="relative group" key={item.name}>
                                     <Link
                                         key={item.name}
                                         href={item.href}
