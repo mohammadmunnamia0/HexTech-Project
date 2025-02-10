@@ -1,11 +1,12 @@
-import Hero from "@/app/home/sections/Hero";
-import ContactPage from "../contact/page";
+import Hero from './sections/Hero';
 import DevelopmentProcess from "./sections/DevelopmentProcess";
-import HireUs from "../HireUS/page";
 import Services from './sections/Services';
 import ClientReview from "./sections/ClientReview";
-import Technology from "./sections/Technology";
-
+import Blog from './sections/Blog';
+import Project from './sections/Project';
+import TechStack from './sections/TechStack';
+import ContactPage from './sections/ContactUs';
+import HireUs from './../HireUS/section/HireUs';
 
 const HomePage = () => {
     return (
@@ -13,12 +14,14 @@ const HomePage = () => {
             <Hero />
             <Services />
             <DevelopmentProcess />
-            <Technology/>
+            <Project />
+            <TechStack />
             <HireUs />
             <ClientReview />
+            <Blog />
             <ContactPage />
         </>
-    )
+    );
 }
 
-export default HomePage
+export default HomePage;
