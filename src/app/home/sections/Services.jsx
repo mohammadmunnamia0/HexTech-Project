@@ -56,8 +56,8 @@ const Services = () => {
 
 
     return (
-        <section className="p-5 lg:mt-12 mt-6">
-            <div className="w-full">
+        <section className="p-5 lg:mt-12 mt-6 container">
+            <div className="lg:w-[85%] mx-auto">
                 <div className="flex flex-col justify-center text-center ">
                     <p
                         className="text-2xl font-semibold"
@@ -120,7 +120,7 @@ const Services = () => {
                                                         </span>
                                                     </p>
                                                 </div>
-                                                <p className="mt-5 lg:w-96">{service.description}</p>
+                                                <p className="mt-5 w-[90%]">{service.description}</p>
                                                 <button className="relative flex items-center mt-8 font-bold text-white transition-all duration-300 cursor-pointer hover:translate-x-3 hover:text-gray-300">
                                                     Read More{" "}
                                                     <MdOutlineChevronRight className="mt-1 text-xl transition-transform duration-300 ease-in-out" />
