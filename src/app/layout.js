@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import LenisSmoothScroll from './LenisSmoothScroll';
 import Loading from "./loading";
+import ScrollProgressCircle from "./ScrollProgressCircle";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +31,7 @@ const RootLayout = ({ children }) => {
         >
           <LenisSmoothScroll />
           <Navbar />
+          <ScrollProgressCircle />
           <main>{children}</main>
           <Footer />
         </body>

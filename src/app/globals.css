@@ -18,7 +18,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #333333, #e0d2d2, #000000);
+    background: linear-gradient(to bottom, #333333, #bfbcbc, #696868);
     /* Gradient from dark gray/black to white */
     border-radius: 8px;
   }
