@@ -1,6 +1,18 @@
 export default function AvailablePositions() {
   const positions = [
     {
+      category: "Intern",
+      jobs: [
+        { location: "Dhaka", title: "UI/UX" },
+        { location: "Uttara,Dhaka", title: "Software Tester" },
+        { location: "Remote", title: "Senior Software Developer" },
+        { location: "Uttara,Dhaka", title: "Product Manager" },
+        { location: "Uttara,Dhaka", title: "React Developer" },
+        { location: "Remote", title: "Full-Stack Developer" },
+        { location: "Uttara,Dhaka", title: "Sr. Software Tester" },
+      ],
+    },
+    {
       category: "Development",
       jobs: [
         { location: "Uttara,Dhaka", title: "Software Tester" },
@@ -18,8 +30,8 @@ export default function AvailablePositions() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6 container">
-      <div className="mt-12">
+    <div className="container mx-auto py-24 px-9 sm:px-6 lg:px-8 mb-8">
+      <div className="mt-7">
         <div className="text-center">
           <div className="text-4xl font-bold p-6">
             Unlock new career <br /> opportunities at ReturnHex
@@ -34,9 +46,9 @@ export default function AvailablePositions() {
         {positions.map((section) => (
           <div key={section.category} className="mb-8">
             <h3 className="text-xl font-semibold mb-4">{section.category}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
               {section.jobs.map((job, index) => (
-                <div key={index} className="border rounded-lg p-4 shadow-sm ">
+                <div key={index} className="border rounded-lg p-4 shadow-sm transition-all duration-300 hover:scale-90 ">
                   <p className="text-sm text-gray-500 uppercase">
                     {job.location}
                   </p>
@@ -49,7 +61,7 @@ export default function AvailablePositions() {
         ))}
       </div>
       <div>
-        <div className="flex bg-white border-gray-500 p-4 rounded-md justify-evenly">
+        <div className="flex bg-white border shadow-md border-gray-500 p-4 rounded-md justify-evenly">
           <div>
             <div className="text-4xl font-bold p-6">
               Don't see the role you're interested in?
@@ -64,7 +76,7 @@ export default function AvailablePositions() {
               href="#_"
               className="relative inline-flex items-center justify-center h-12 px-6 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-lg shadow-purple-300/50 group"
             >
-              <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+              <span className="absolute inset-0 flex items-center justify-center w-full h-full text-grey-900 duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
                 <svg
                   className="w-6 h-6"
                   fill="none"
