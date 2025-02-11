@@ -47,7 +47,7 @@ export default function Loading({ children }) {
 
 
   return (
-    <div className="relative  w-full overflow-auto ">
+    <div className="relative w-full overflow-auto">
       {" "}
       {/* Ensure scroll is possible here */}
       {/* Loader */}
