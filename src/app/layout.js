@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
 import LenisSmoothScroll from './LenisSmoothScroll';
+import Loading from "./loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,17 +23,18 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <LenisSmoothScroll />
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </body>
+      <Loading>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <LenisSmoothScroll />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </Loading>
     </html>
+
   );
 }
 
