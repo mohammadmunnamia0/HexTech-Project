@@ -25,7 +25,7 @@ export default function HireUs() {
   return (
     <div className="min-h-screen flex flex-col p-8 container">
       <div className="text-center">
-        <p className=" font-bold mb-5 text-center text-5xl font-serif">Hire Us</p>
+        {/* <p className=" font-bold mb-5 text-center text-5xl font-serif">Hire Us</p> */}
         {/* <img
           className="w-52 h-52 mx-auto"
          
