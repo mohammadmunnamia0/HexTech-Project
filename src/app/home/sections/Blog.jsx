@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img from "../../../assets/icon/blog.jpg";
+import img from "@/assets/icon/blog.jpg";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
 import { IoBookmarksOutline } from "react-icons/io5";

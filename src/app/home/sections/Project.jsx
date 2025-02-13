@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaCode } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { MdOutlineArrowOutward } from "react-icons/md";
-import gadget from "../../../assets/Project/gadget.jpeg";
+import gadget from "@/assets/Project/gadget.jpeg"
 
 
 const projects = [

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import gif1 from "../../../assets/gif1.gif";
-import gif2 from "../../../assets/gif2.gif";
-import gif3 from "../../../assets/gif3.gif";
-import gif4 from "../../../assets/gif4.gif";
+import gif1 from "@/assets/gif1.gif";
+import gif2 from "@/assets/gif2.gif";
+import gif3 from "@/assets/gif3.gif";
+import gif4 from "@/assets/gif4.gif";
 
 
 export default function DevelopmentProcess() {
