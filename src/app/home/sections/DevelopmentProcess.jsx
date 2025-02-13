@@ -4,6 +4,7 @@ import gif2 from "../../../assets/gif2.gif";
 import gif3 from "../../../assets/gif3.gif";
 import gif4 from "../../../assets/gif4.gif";
 
+
 export default function DevelopmentProcess() {
     const developmentProcess = [
         {
@@ -19,7 +20,7 @@ export default function DevelopmentProcess() {
         {
             title: "Development",
             description: "Building your solution with best practices",
-        
+       
             gif: <Image src={gif3} alt="Initial Consultation" className="h-16 w-16" />,
         },
         {
@@ -31,7 +32,7 @@ export default function DevelopmentProcess() {
     return (
         <section className="py-20 lg:mt-12 mt-5 lg:mb-12 mb-5">
             <div className="container">
-                <h2 className="text-3xl md:text-4xl font-semibold text-center lg:mb-16 mb:5">
+                <h2 className="text-3xl md:text-4xl font-semibold text-center lg:mb-16 mb-5">
                     Our Development Process
                 </h2>
                 <div className="grid md:grid-cols-4 gap-8">
@@ -41,7 +42,7 @@ export default function DevelopmentProcess() {
                             className="relative flex flex-col items-center text-center"
                         >
                             {index < developmentProcess.length - 1 && (
-                                <div className="absolute top-5 left-1/2 w-full h-0.5 bg-border -z-10" />
+                                <div className="absolute top-5 lg:left-1/2 w-full h-0.5 bg-border -z-10" />
                             )}
                             <div className="bg-background p-4 rounded-full mb-4">
                                 {step.gif}
@@ -55,3 +56,6 @@ export default function DevelopmentProcess() {
         </section>
     )
 }
+
+
+
