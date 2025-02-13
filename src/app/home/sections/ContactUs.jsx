@@ -3,7 +3,7 @@ export default function ContactPage() {
       "w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400";
     const labelClass = "block text-gray-700 text-sm font-bold mb-2";
     return (
-      <div className="container lg:mt-[7%] lg:mb-[4%]">
+      <div id="contact" className="container lg:mt-[7%] lg:mb-[4%]">
         <h1 className="text-4xl text-center font-semibold">Get In Touch</h1>
   
         <div className="flex flex-col md:flex-row items-center justify-center min-h-screen  p-8">
