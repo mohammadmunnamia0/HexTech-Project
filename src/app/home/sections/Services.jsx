@@ -1,9 +1,9 @@
-import icon1 from "../../../assets/icon/icon1.gif";
-import icon2 from "../../../assets/icon/icon2.gif";
-import icon3 from "../../../assets/icon/icon3.gif";
-import icon4 from "../../../assets/icon/icon4.gif";666
-import icon5 from "../../../assets/icon/icon5.gif";
-import icon6 from "../../../assets/icon/icon6.gif";
+import icon1 from "@/assets/icon/icon1.gif";
+import icon2 from "@/assets/icon/icon2.gif";
+import icon3 from "@/assets/icon/icon3.gif";
+import icon4 from "@/assets/icon/icon4.gif";
+import icon5 from "@/assets/icon/icon5.gif";
+import icon6 from "@/assets/icon/icon6.gif";
 import { MdOutlineChevronRight } from "react-icons/md";
 import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";

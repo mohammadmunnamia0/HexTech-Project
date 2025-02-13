@@ -20,6 +20,7 @@ export default function Footer() {
           </div>
         </div>
 
+
         {/* Right Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {/* Platform */}
@@ -41,6 +42,7 @@ export default function Footer() {
             </ul>
           </div>
 
+
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-lg mb-3">Resources</h3>
@@ -59,6 +61,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
 
           {/* Legals */}
           <div>
@@ -81,23 +84,71 @@ export default function Footer() {
         </div>
       </div>
 
+
       <div className="border-t border-gray-800 mt-8 pt-6 flex items-center">
         <p className="text-white text-2xl">Follow us on : </p>
-        <div className="flex space-x-4 text-lg">
-          <Link href="/" className="text-blue-500 ml-5 hover:text-gray-400">
-            <FaFacebookF />
-          </Link>
-          <Link href="/" className="text-blue-500 hover:text-black">
-            <FaTwitter />
-          </Link>
-          <Link href="/" className="text-blue-400 hover:text-black">
-            <BsDiscord />
-          </Link>
-          <Link href="/" className=" hover:text-black">
-            <IoLogoGithub />
-          </Link>
+        <div className="flex justify-center items-center mx-4">
+          <ul className="flex space-x-4">
+            {/* Facebook */}
+            <li>
+              <Link
+                href="/"
+                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
+              >
+                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
+                  <FaFacebookF />
+                </span>
+                <span className="absolute inset-0 bg-[#3b5999] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              </Link>
+            </li>
+
+
+            {/* Twitter */}
+            <li>
+              <Link
+                href="/"
+                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
+              >
+                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
+                  <FaTwitter />
+                </span>
+                <span className="absolute inset-0 bg-[#55acee] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              </Link>
+            </li>
+
+
+            {/* Discord */}
+            <li>
+              <Link
+                href="/"
+                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
+              >
+                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
+                  <BsDiscord />
+                </span>
+                <span className="absolute inset-0 bg-[#0077b5] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              </Link>
+            </li>
+
+
+            {/* GitHub */}
+            <li>
+              <Link
+                href="/"
+                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
+              >
+                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
+                  <IoLogoGithub />
+                </span>
+                <span className="absolute inset-0 bg-[#dd4b39] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
   );
 }
+
+
+
