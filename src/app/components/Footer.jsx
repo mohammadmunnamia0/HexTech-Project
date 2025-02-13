@@ -97,9 +97,6 @@ export default function Footer() {
             <IoLogoGithub />
           </Link>
         </div>
-        <div>
-          <img src="/" alt="s" />
-        </div>
       </div>
     </footer>
   );

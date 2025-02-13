@@ -1,9 +1,18 @@
-const AboutPage = () => {
-  return (
-    <div className="text-center mt-10 mb-10 text-5xl pt-28">
-      This is About Page
-    </div>
-  )
-}
+import MVO from "./section/MVO";
+import OurTeam from "./section/OurTeam"
+import Gallery from "./section/Gallery"
+import Gallery2 from "./section/Gallery2";
 
-export default AboutPage
+
+const page = () => {
+  return (
+    <div>
+      <OurTeam/>
+      <MVO/>
+      <Gallery></Gallery>
+      <Gallery2></Gallery2>
+    </div>
+  );
+};
+
+export default page;

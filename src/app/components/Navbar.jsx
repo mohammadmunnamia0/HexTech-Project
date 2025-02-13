@@ -9,8 +9,8 @@ const Navbar = () => {
         { name: 'Home', href: '/home' },
         { name: 'Hire Us', href: '/HireUS' },
         { name: 'About', href: '/about' },
-        { name: 'Careers', href: '/' },
-        { name: 'Blog', href: '/' },
+        { name: 'Careers', href: '/Career' },
+        { name: 'Blog', href: '/Blog' },
     ];
     return (
         <nav className="fixed w-full lg:h-[80px] bg-white/90 backdrop-blur-sm z-50 shadow-sm">
