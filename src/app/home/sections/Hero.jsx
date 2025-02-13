@@ -1,9 +1,7 @@
-import FewOrbitAnimation from "@/app/components/shared/FewOrbitAnimation";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gray-50 pt-20">
-      <FewOrbitAnimation />
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
