@@ -7,6 +7,7 @@ import icon6 from "@/assets/icon/icon6.gif";
 import { MdOutlineChevronRight } from "react-icons/md";
 import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
     const services = [
@@ -121,10 +122,12 @@ const Services = () => {
                                                     </p>
                                                 </div>
                                                 <p className="mt-5 w-[90%]">{service.description}</p>
-                                                <button className="relative flex items-center mt-8 font-bold text-white transition-all duration-300 cursor-pointer hover:translate-x-3 hover:text-gray-300">
-                                                    Read More{" "}
-                                                    <MdOutlineChevronRight className="mt-1 text-xl transition-transform duration-300 ease-in-out" />
-                                                </button>
+                                                <Link href='/HireUS'>
+                                                    <button className="relative flex items-center mt-8 font-bold text-white transition-all duration-300 cursor-pointer hover:translate-x-3 hover:text-gray-300">
+                                                        Hire Us{" "}
+                                                        <MdOutlineChevronRight className="mt-1 text-xl transition-transform duration-300 ease-in-out" />
+                                                    </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

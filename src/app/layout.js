@@ -6,7 +6,6 @@ import LenisSmoothScroll from './LenisSmoothScroll';
 import Loading from "./loading";
 import ScrollProgressCircle from "./ScrollProgressCircle";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,6 +22,7 @@ export const metadata = {
 };
 
 const RootLayout = ({ children }) => {
+  
   return (
     <html lang="en">
       <Loading>
