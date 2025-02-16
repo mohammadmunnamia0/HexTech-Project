@@ -51,6 +51,61 @@
   @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
 }
 
+/* hero section swiper start */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swiper-slide-active .scale-110 {
+  transform: scale(1);
+}
+
+/* Custom Pagination Styles */
+.hero-slider .swiper-pagination {
+  bottom: 5rem !important;
+}
+
+.hero-slider .swiper-pagination-bullet {
+  width: 2.5rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  margin: 0 0.5rem !important;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.hero-slider .swiper-pagination-bullet-active {
+  background: #fff;
+  width: 2.5rem;
+}
+/* hero section swiper end */
+
+/* unUsed Design hire Us section css start */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* unUsed Design hire Us section css end */
+
 /* Swiper pagination styles */
 .swiper-pagination {
   position: relative !important;

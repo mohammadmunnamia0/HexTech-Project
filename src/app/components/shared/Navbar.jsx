@@ -31,7 +31,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16 lg:mt-2">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center space-x-2">
-                            <span className="text-xl font-bold">ReturnHex</span>
+                            <span className="text-xl font-bold">returnHex</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
@@ -54,17 +54,29 @@ const Navbar = () => {
                                     ></span>
                                 </div>
                             ))}
-                            <button
+                            {/* <button
                                 onClick={handleScroll}
                                 className="relative inline-block text-base group"
                             >
                                 <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-900 rounded-md group-hover:text-white">
                                     <span className="absolute inset-0 w-full h-full px-4 py-2 rounded-md bg-gray-50"></span>
                                     <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                                    <span className="relative">Contact Us</span>
+                                    <span className="relative">Let's Talk</span>
                                 </span>
                                 <span className="absolute bottom-0 right-0 w-full h-10 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-md group-hover:mb-0 group-hover:mr-0"></span>
-                            </button>
+                            </button> */}
+                            <Link href='/HireUS'>
+                                <button
+                                    className="relative inline-block text-base group"
+                                >
+                                    <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-900 rounded-md group-hover:text-white">
+                                        <span className="absolute inset-0 w-full h-full px-4 py-2 rounded-md bg-gray-50"></span>
+                                        <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                                        <span className="relative">Let's Talk</span>
+                                    </span>
+                                    <span className="absolute bottom-0 right-0 w-full h-10 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-md group-hover:mb-0 group-hover:mr-0"></span>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className="md:hidden">

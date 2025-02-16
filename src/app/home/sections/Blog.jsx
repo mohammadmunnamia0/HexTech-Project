@@ -67,7 +67,7 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white py-16">
+    <div className="min-h-screen bg-white lg:mt-32 mt-10">
       <div className="container mx-auto px-4">
         {/* Featured Article */}
         {blogPosts
@@ -103,17 +103,17 @@ export default function Blog() {
                         <span>{post.date}</span>
                       </div>
                     </div>
-                    <a href="#" className="self-start group">
-                      <div className="bg-black hover:bg-gray-900 px-8 py-3 rounded-full transition-colors">
-                        <span className="flex items-center gap-2 text-white font-semibold">
-                          Read Article
-                          <BiRightArrowAlt
-                            size={18}
-                            className="mt-1 group-hover:translate-x-1 transition-transform"
-                          />
-                        </span>
-                      </div>
+                    <a href="#_" class="self-start relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium text-white bg-gray-800 group">
+                      <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-black group-hover:w-56 group-hover:h-56"></span>
+                      <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+                      <span class="relative flex">Read Article
+                        <BiRightArrowAlt
+                          size={18}
+                          className="mt-1 group-hover:translate-x-1 transition-transform"
+                        />
+                      </span>
                     </a>
+
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <div className="aspect-[4/3]">

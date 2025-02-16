@@ -1,48 +1,121 @@
-import Image from "next/image";
-import Link from "next/link";
-import errorImage from "../../public/404-shopping.svg";
-export const metadata = {
-    title: "Page Not Found - E-Commerce Store",
-    description: "Sorry, the page you are looking for does not exist.",
-};
+'use client';
 
-const NotFound = () => {
+import { useState, useEffect } from 'react';
+import { FiHexagon, FiArrowLeft } from "react-icons/fi";
+import { FaTerminal } from "react-icons/fa";
+
+
+export default function NotFound() {
+    const [isGlitching, setIsGlitching] = useState(false);
+    const [hexagons, setHexagons] = useState([]);
+
+    useEffect(() => {
+        const newHexagons = Array(20).fill(null).map(() => ({
+            left: Math.random() * 100,
+            top: Math.random() * 100,
+            rotate: Math.random() * 360,
+            opacity: Math.random() * 100,
+            pulse: Math.random() > 0.5
+        }));
+        setHexagons(newHexagons);
+    }, []);
+
     return (
-        <section className="flex items-center justify-center p-42 mb-10">
-            <section className="w-full max-w-3xl text-center space-y-8">
-                <section className="relative w-full h-64 md:h-80">
-                    <Image
-                        src={errorImage}
-                        alt="404 illustration"
-                        fillF
-                        priority
-                        className="object-contain"
-                    />
-                </section>
+        <div className="min-h-screen bg-black text-white overflow-hidden flex items-center justify-center relative">
+            {/* Animated hex grid background */}
+            <div
+                className={`absolute inset-0 opacity-10 ${isGlitching ? 'animate-pulse' : ''}`}
+                onMouseEnter={() => setIsGlitching(true)}
+                onMouseLeave={() => setIsGlitching(false)}
+            >
+                <div className="relative w-full h-full">
+                    {hexagons.map((hex, i) => (
+                        <FiHexagon
+                            key={i}
+                            className={`absolute w-24 h-24 transform ${hex.pulse ? 'animate-pulse' : ''}`}
+                            style={{
+                                left: `${hex.left}%`,
+                                top: `${hex.top}%`,
+                                transform: `rotate(${hex.rotate}deg)`,
+                                opacity: hex.opacity / 100
+                            }}
+                        />
+                    ))}
+                </div>
+            </div>
 
-                <section className="space-y-4">
-                    <h1 className="text-4xl md:text-5xl font-bold">
-                        Oops! Page Not Found
-                    </h1>
+            {/* Main content */}
+            <div className="relative z-10 max-w-4xl w-full mx-4">
+                <div>
+                    {/* Company logo */}
+                    <div className="flex items-center justify-center mb-8">
+                        <div className="relative">
+                            <FiHexagon className="w-16 h-16 text-white" />
 
-                    <p className="text-muted-foreground text-lg max-w-md mx-auto">
-                        We couldn&apos;t find the page you&apos;re looking for. The item
-                        might have been moved or removed.
-                    </p>
-                </section>
+                        </div>
+                        <h1 className="text-4xl font-bold ml-4">ReturnHex</h1>
+                    </div>
 
-                <section className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button
-                        asChild
-                        size="lg"
-                        className="bg-black hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-200 hover:border-blue-500 rounded"
-                    >
-                        <Link href="/">Back to Home</Link>
-                    </button>
-                </section>
-            </section>
-        </section>
+                    {/* Error message */}
+                    <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 shadow-2xl">
+                        <div className="flex items-start space-x-6">
+                            <div className="bg-red-500/10 rounded-2xl p-4">
+                                <FaTerminal className="w-8 h-8 text-red-500" />
+                            </div>
+                            <div className="space-y-2">
+                                <h2 className="text-2xl font-semibold text-red-500">Error 404</h2>
+                                <p className="text-xl font-medium text-white/90">Page Not Found</p>
+                                <p className="text-white/60 max-w-lg">
+                                    The requested resource could not be located on the server.
+                                    It might have been moved, deleted, or never existed.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Terminal-like error details */}
+                        <div className="mt-8 bg-black/50 rounded-xl p-4 font-mono text-sm">
+                            <div className="flex items-center space-x-2 text-white/60">
+                                <span className="text-red-500">→</span>
+                                <span>Error occurred at:</span>
+                                <span className="text-yellow-500">{window.location.pathname}</span>
+                            </div>
+                            <div className="mt-2 text-white/40">
+                                Stack trace:
+                                <div className="ml-4 mt-1 space-y-1">
+                                    <div>at Router.resolve (router.ts:256:23)</div>
+                                    <div>at async Server.handle (server.ts:128:45)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Action buttons */}
+                        <div className="mt-8 flex flex-wrap gap-4">
+                            <button
+                                onClick={() => window.history.back()}
+                                className="group flex items-center gap-2 bg-white/5 hover:bg-white/10 px-6 py-3 rounded-xl transition-all duration-200 border border-white/10 hover:border-white/20"
+                            >
+                                <FiArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+                                Go Back
+                            </button>
+                            <a
+                                href="/"
+                                className="flex items-center gap-2 bg-white/5 hover:bg-white/10 px-6 py-3 rounded-xl transition-all duration-200 border border-white/10 hover:border-white/20"
+                            >
+                                Home Page
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-red-500/20 to-transparent rounded-full blur-xl"></div>
+                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-l from-blue-500/20 to-transparent rounded-full blur-xl"></div>
+                </div>
+
+                {/* Footer */}
+                <div className="mt-12 text-center text-white/40 text-sm">
+                    <p>© 2025 ReturnHex. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     );
 }
-
-export default NotFound

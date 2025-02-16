@@ -25,10 +25,10 @@ export default function HireUs() {
   return (
     <div className="min-h-screen flex flex-col p-8 container">
       <div className="text-center">
-        {/* <p className=" font-bold mb-5 text-center text-5xl font-serif">Hire Us</p> */}
+        <p className=" font-bold text-center text-5xl font-serif">Hire Us</p>
         {/* <img
           className="w-52 h-52 mx-auto"
-         
+
           alt="Loading Animation"
         /> */}
       </div>
@@ -60,10 +60,10 @@ export default function HireUs() {
           </div>
           <div className="flex justify-center items-center ml-[270px] w-1/3  mt-2">
             <div>
-            <img className="flex justify-center items-center"
-               src="https://cdn-icons-gif.flaticon.com/16104/16104326.gif"
-              alt="ss"
-            />
+              <img className="flex justify-center items-center"
+                src="https://cdn-icons-gif.flaticon.com/16104/16104326.gif"
+                alt="ss"
+              />
             </div>
           </div>
 
@@ -89,11 +89,10 @@ export default function HireUs() {
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm
-                     ${
-                       selectedService === service
-                         ? "bg-black text-white"
-                         : "bg-gray-200 text-gray-700"
-                     }`}
+                     ${selectedService === service
+                      ? "bg-black text-white"
+                      : "bg-gray-200 text-gray-700"
+                    }`}
                   onClick={() => setSelectedService(service)}
                 >
                   {service}
@@ -110,10 +109,9 @@ export default function HireUs() {
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm 
-                    ${
-                      selectedBudget === budget
-                        ? "bg-black text-white"
-                        : "bg-gray-200 text-gray-700"
+                    ${selectedBudget === budget
+                      ? "bg-black text-white"
+                      : "bg-gray-200 text-gray-700"
                     }`}
                   onClick={() => setSelectedBudget(budget)}
                 >
