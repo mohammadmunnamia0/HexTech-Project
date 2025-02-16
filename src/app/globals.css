@@ -1,6 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .clip-hex {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      border-radius: 0;
+    }
+    .hexagon-hover {
+      transition: clip-path 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+      will-change: clip-path, border-radius;
+    }
+  
+    .hexagon-hover:hover {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      border-radius: 0;
+    }
+}
+@keyframes borderLight {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@layer utilities {
+  .animate-borderLight {
+    animation: borderLight 2s infinite alternate ease-in-out;
+  }
+}
 
 :root {
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
