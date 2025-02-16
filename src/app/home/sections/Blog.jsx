@@ -67,7 +67,7 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white py-16">
+    <div className="min-h-screen bg-white py-16 mt-10 lg:mt-20">
       <div className="container mx-auto px-4">
         {/* Featured Article */}
         {blogPosts

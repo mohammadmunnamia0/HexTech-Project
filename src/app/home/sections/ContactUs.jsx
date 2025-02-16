@@ -7,12 +7,12 @@ export default function ContactPage() {
       <div className="relative min-h-screen flex items-center justify-center p-4">
         <div className="relative w-full max-w-6xl mx-auto">
           {/* Main content container */}
-          <div className="relative bg-white/50 backdrop-blur-lg rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-white/20">
+          <div className="relative bg-white/50 backdrop-blur-lg rounded-[2.5rem] p-8 md:p-12 border border-white/20">
             {/* Floating elements */}
-            <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-black text-white px-8 py-4 rounded-2xl shadow-lg">
-              <h1 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+            <div className="absolute lg:w-[60%] -top-12 left-1/2 -translate-x-1/2 bg-black text-white px-8 py-4 rounded-2xl ">
+              <h1 className="text-2xl lg:text-4xl font-bold flex items-center gap-4 ">
                 Let's Create Something Amazing
-                <LuSparkles className="w-6 h-6" />
+                <LuSparkles className="w-6 h-6 mt-1"/>
               </h1>
             </div>
 
@@ -26,7 +26,6 @@ export default function ContactPage() {
                   <h2 className="text-xl font-semibold mb-2 pl-8">Get in Touch</h2>
                   <p className="text-gray-600">Ready to start your next project? We're here to turn your ideas into reality.</p>
                 </div>
-
                 <div className="relative bg-black text-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -35,7 +34,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-gray-400 text-sm">Email us at</p>
-                        <p className="font-medium">returnhex@gmail.com</p>
+                        <p className="font-medium">returnhex.official@gmail.com</p>
                       </div>
                     </div>
 

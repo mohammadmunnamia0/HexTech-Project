@@ -16,7 +16,6 @@ const HomePage = () => {
             <DevelopmentProcess />
             <Project />
             <TechStack />
-            <HireUs />
             <ClientReview />
             <Blog />
             <ContactPage />

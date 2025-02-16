@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 
 function TechCard({ icon: Icon, name, iconColor }) {
   return (
-    <div className="group relative flex flex-col items-center p-8 bg-white rounded-2xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] overflow-hidden">
+    <div className="group  relative flex flex-col items-center p-8 bg-white rounded-2xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.1)] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="absolute -inset-1 bg-gradient-to-r from-gray-100 to-gray-50 transform scale-[1.01] opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10" />
       <div className="relative z-10 flex flex-col items-center">
@@ -50,8 +50,8 @@ function TechStack() {
     <div className="min-h-screen bg-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Technology Stack</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Technology Stack</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-16">
             Our comprehensive tech stack enables us to build robust, scalable, and modern applications
           </p>
         </div>
