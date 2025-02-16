@@ -99,7 +99,7 @@ const Services = () => {
 
 
                                 {/* The bigger card (hidden by default, shown on hover) */}
-                                <div className="absolute inset-0 z-20 flex items-center text-white lg:p-8 p-4 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out">
+                                <div className="absolute inset-0 z-20 flex items-center text-white lg:p-8 p-4 bg-black transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out">
                                     <div className="w-full">
                                         <div className="flex justify-between">
                                             <p className="flex text-4xl font-extrabold text-white tracking-normal">

@@ -54,7 +54,7 @@ export default function DevelopmentProcess() {
     ];
 
     return (
-        <section className="py-20  bg-gray-600 lg:mt-12 mt-5 lg:mb-12 mb-5">
+        <section className="py-20  bg-black lg:mt-12 mt-5 lg:mb-12 mb-5">
             <div className="container  text-white">
                 <h2 className="text-3xl lg:text-4xl font-semibold lg:mb-16 mb-5">
                     Our Development Process -

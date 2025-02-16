@@ -1,154 +1,128 @@
+
 "use client";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaDribbble } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
+import { FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
+import { LuPhone,LuLinkedin,LuMapPin } from "react-icons/lu";
+import { GoArrowRight } from "react-icons/go";
+
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-12 px-8 ">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between ">
-        {/* Left Section */}
-        <div className="mb-8 md:mb-0">
-          <h2 className="text-xl font-bold">
-            Get in touch : returnhex@gmail.com
-          </h2>
-          <div className="flex justify-center items-center  bg-black">
-            <h1 className="text-6xl font-bold text-white glow rounded-xl px-6 py-3 relative">
-              returnhex
-              <span className="absolute inset-0 rounded-xl bg-gradient-to-r  from-gray-300 via-gray-500 to-gray-400  blur-xl opacity-75 animate-pulse"></span>
-            </h1>
+    <footer className="bg-black text-gray-300">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-2">
+              <span className="text-2xl font-bold text-white">returnHex</span>
+            </div>
+            <p className="text-gray-400 max-w-xs">
+              Crafting digital experiences that inspire, innovate, and impact. Your vision, our expertise.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="#" className="hover:text-white transition-colors">
+                <IoLogoGithub className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                <LuLinkedin className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                <FaTwitter className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
-        </div>
 
-
-        {/* Right Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {/* Platform */}
+          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-3">Platform</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/">About</Link>
-              </li>
-              <li>
-                <Link href="/">Features</Link>
-              </li>
-              <li>
-                <Link href="/">Pricing & Plans</Link>
-              </li>
-              <li>
-                <Link href="/">Contact</Link>
-              </li>
+            <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
+            <ul className="space-y-4">
+              {['Home', 'About', 'Services', 'Portfolio', 'Blog'].map((item) => (
+                <li key={item}>
+                  <Link 
+                    href="#" 
+                    className="group flex items-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-
-          {/* Resources */}
+          {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-3">Resources</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/">Account</Link>
-              </li>
-              <li>
-                <Link href="/">Tools</Link>
-              </li>
-              <li>
-                <Link href="/">Newsletter</Link>
-              </li>
-              <li>
-                <Link href="/">FAQ</Link>
-              </li>
+            <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
+            <ul className="space-y-4">
+              {[
+                'Web Development',
+                'Mobile Apps',
+                'UI/UX Design',
+                'Cloud Solutions',
+                'DevOps'
+              ].map((service) => (
+                <li key={service}>
+                  <Link 
+                    href="#" 
+                    className="group flex items-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                    {service}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-
-          {/* Legals */}
-          <div>
-            <h3 className="font-semibold text-lg mb-3">Legals</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/">Guides</Link>
-              </li>
-              <li>
-                <Link href="/">Terms & Conditions</Link>
-              </li>
-              <li>
-                <Link href="/">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/">Licensing</Link>
-              </li>
-            </ul>
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white">Contact Us</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <LuMapPin className="h-5 w-5 text-gray-400 mt-1" />
+                <p className="text-gray-400">
+                  123 Innovation Street
+                  <br />
+                  Tech Valley, CA 94043
+                </p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <LuPhone className="h-5 w-5 text-gray-400" />
+                <p className="text-gray-400">+880 1323116356</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <IoMailOutline className="h-5 w-5 text-gray-400" />
+                <p className="text-gray-400">returnhex.official@gmail.com</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-
-      <div className="border-t border-gray-800 mt-8 pt-6 flex items-center">
-        <p className="text-white text-2xl">Follow us on : </p>
-        <div className="flex justify-center items-center mx-4">
-          <ul className="flex space-x-4">
-            {/* Facebook */}
-            <li>
-              <Link
-                href="/"
-                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
-              >
-                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
-                  <FaFacebookF />
-                </span>
-                <span className="absolute inset-0 bg-[#3b5999] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} returnHex. All rights reserved.
+            </p>
+            <div className="flex space-x-6 text-sm text-gray-400">
+              <Link href="#" className="hover:text-white transition-colors">
+                Privacy Policy
               </Link>
-            </li>
-
-
-            {/* Twitter */}
-            <li>
-              <Link
-                href="/"
-                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
-              >
-                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
-                  <FaTwitter />
-                </span>
-                <span className="absolute inset-0 bg-[#55acee] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              <Link href="#" className="hover:text-white transition-colors">
+                Terms of Service
               </Link>
-            </li>
-
-
-            {/* Discord */}
-            <li>
-              <Link
-                href="/"
-                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
-              >
-                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
-                  <BsDiscord />
-                </span>
-                <span className="absolute inset-0 bg-[#0077b5] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
+              <Link href="#" className="hover:text-white transition-colors">
+                Cookie Policy
               </Link>
-            </li>
-
-
-            {/* GitHub */}
-            <li>
-              <Link
-                href="/"
-                className="group relative w-10 h-10 bg-white flex justify-center items-center text-3xl rounded-full border-4 border-white overflow-hidden transition-all duration-500"
-              >
-                <span className="relative z-10 text-[#262626] group-hover:text-white transition-all duration-500 group-hover:rotate-[360deg]">
-                  <IoLogoGithub />
-                </span>
-                <span className="absolute inset-0 bg-[#dd4b39] translate-y-full group-hover:translate-y-0 transition-all duration-500"></span>
-              </Link>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-
-
-

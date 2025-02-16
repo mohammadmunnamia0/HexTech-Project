@@ -46,7 +46,7 @@ const ClientReview = () => {
     ];
 
     return (
-        <section className="bg-gray-600">
+        <section className="bg-black">
             <div className="container lg:flex mx-auto py-16 px-4 sm:px-6 lg:px-8 ">
                 <div className="text-center lg:p-12 text-white">
                     <span className="text-sm  font-medium block text-left mb-4">Testimonial</span>
@@ -55,10 +55,10 @@ const ClientReview = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-tr from-gray-500 to-gray-200"> Feedback</span>
                     </h2>
                     <div className="flex gap-6 mt-6">
-                        <button className="swiper-button-prev-custom flex justify-center items-center border border-white w-10 h-10 rounded-lg hover:bg-black hover:border-none hover:text-white">
+                        <button className="swiper-button-prev-custom flex justify-center items-center border border-white w-10 h-10 rounded-lg hover:bg-white hover:border-none hover:text-black">
                             ←
                         </button>
-                        <button className="swiper-button-next-custom flex justify-center items-center border border-white w-10 h-10 rounded-lg hover:bg-black hover:border-none hover:text-white">
+                        <button className="swiper-button-next-custom flex justify-center items-center border border-white w-10 h-10 rounded-lg hover:bg-white hover:border-none hover:text-black">
                             →
                         </button>
                     </div>

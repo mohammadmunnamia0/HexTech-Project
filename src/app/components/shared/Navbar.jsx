@@ -31,7 +31,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16 lg:mt-2">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center space-x-2">
-                            <span className="text-xl font-bold">ReturnHex</span>
+                            <span className="text-xl font-bold">returnHex</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
