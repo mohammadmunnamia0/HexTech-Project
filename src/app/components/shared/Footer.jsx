@@ -1,11 +1,12 @@
 
 "use client";
+
 import Link from "next/link";
 import { IoMailOutline } from "react-icons/io5";
 import { FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
-import { LuPhone,LuLinkedin,LuMapPin } from "react-icons/lu";
+import { LuPhone, LuLinkedin, LuMapPin } from "react-icons/lu";
 import { GoArrowRight } from "react-icons/go";
 
 export default function Footer() {
@@ -24,6 +25,12 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-white transition-colors">
+                <FaFacebookF className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
+                <BsDiscord className="h-5 w-5" />
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
                 <IoLogoGithub className="h-5 w-5" />
               </Link>
               <Link href="#" className="hover:text-white transition-colors">
@@ -41,8 +48,8 @@ export default function Footer() {
             <ul className="space-y-4">
               {['Home', 'About', 'Services', 'Portfolio', 'Blog'].map((item) => (
                 <li key={item}>
-                  <Link 
-                    href="#" 
+                  <Link
+                    href="#"
                     className="group flex items-center text-gray-400 hover:text-white transition-colors"
                   >
                     <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
@@ -65,8 +72,8 @@ export default function Footer() {
                 'DevOps'
               ].map((service) => (
                 <li key={service}>
-                  <Link 
-                    href="#" 
+                  <Link
+                    href="#"
                     className="group flex items-center text-gray-400 hover:text-white transition-colors"
                   >
                     <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
@@ -84,9 +91,9 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <LuMapPin className="h-5 w-5 text-gray-400 mt-1" />
                 <p className="text-gray-400">
-                  123 Innovation Street
+                  123 Uttara Sector 10
                   <br />
-                  Tech Valley, CA 94043
+                  Dhaka, Bangladesh
                 </p>
               </div>
               <div className="flex items-center space-x-3">
