@@ -1,5 +1,5 @@
-import HireUs from "./section/HireUs";
 import WhyUs from "./WhyUs/WhyUs";
+import HireUs from "./section/HireUs";
 
 export default function HiringPage() {
   return (

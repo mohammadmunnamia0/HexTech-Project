@@ -3,29 +3,38 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 
+
+
+const missionText = `At our core, we are dedicated to crafting custom software and web solutions that align perfectly with our clients' unique needs and visions. Our mission is to deliver high-quality, scalable, and idiot-proof applications that enhance business efficiency, streamline processes, and elevate user experiences.`;
+
+const visionText = `We envision a world where technology is not a barrier but a bridge—connecting people, businesses, and possibilities. Our vision is to become a leading software development company recognized for delivering seamless, secure, and scalable digital solutions.`;
+
+const goalText = `Our goal is to create technology-driven solutions that make a real impact. We focus on building custom solutions, user-centric design, scalability & performance, client satisfaction, continuous learning, and creating an inspiring work culture.`;
+
+
 const MVO = () => {
   return (
     <div className="bg-white">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imgUrl="https://img.freepik.com/premium-photo/copy-space-blue-background-surrounded-by-keyboard-headphone-vr-headset-with-controllers_67155-16146.jpg"
         subheading=""
         heading="Our Mission "
       >
-        <ExampleContent />
+        <MissionContent />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading=""
         heading="Our Vision"
       >
-        <ExampleContent />
+        <VisionContent />
       </TextParallaxContent>
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         subheading=""
         heading="Our Goal"
       >
-        <ExampleContent />
+        <GoalContent />
       </TextParallaxContent>
     </div>
   );
@@ -110,28 +119,23 @@ const OverlayCopy = ({ subheading, heading }) => {
   );
 };
 
-const ExampleContent = () => (
+const MissionContent = () => (
+  <ContentSection title="Mission" content={missionText} />
+);
+const VisionContent = () => (
+  <ContentSection title="Vision" content={visionText} />
+);
+const GoalContent = () => <ContentSection title="Goal" content={goalText} />;
+
+const ContentSection = ({ title, content }) => (
   <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-      Additional content explaining the above card here
-    </h2>
+    <h2 className="col-span-1 flex justify-center items-center text-5xl font-bold md:col-span-4">{title}</h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-        blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-        maiores voluptate est ut saepe accusantium maxime doloremque nulla
-        consectetur possimus.
-      </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-        reiciendis blanditiis aliquam aut fugit sint.
-      </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-        Learn more <FiArrowUpRight className="inline" />
-      </button>
+      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">{content}</p>
     </div>
   </div>
 );
+
 
 
 export default MVO;

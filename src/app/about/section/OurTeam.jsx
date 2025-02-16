@@ -6,52 +6,52 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const teamMembers = [
   {
-    img: "https://pagedone.io/asset/uploads/1696238644.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e535b9746008059478ec0d0_peep-85.svg",
     name: "Abdul Ahad Linkon",
     role: "Senior Developer",
     details: "Expert in backend technologies and architecture.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238665.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e5357fcc99250d0c6c8a111_peep-54.svg",
     name: "Al Imran Tonmoy",
     role: "Project Manager",
     details: "Manages projects with efficiency and precision.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238684.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e53533367293a3e5c5a8b35_peep-21.svg",
     name: "Raiyan Chawdhori",
     role: "HR",
     details: "Ensures a great workplace environment.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238702.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e5350f9d399238698511b2f_peep-7.svg",
     name: "Md Bakhtier Fahim",
     role: "Developer",
     details: "Loves solving complex frontend problems.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238720.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e535a648e249323fd077d2b_peep-75.svg",
     name: "Rakibul Hasan",
     role: "Developer",
     details: "Passionate about building scalable web applications.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238737.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e5352709588e06bd47b75e0_peep-19.svg",
     name: "Md Munna Mia",
     role: "Developer",
     details: "Focuses on creating idiot-proof applications.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238755.png",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e5358fb9b55b0b0f453f5f5_peep-63.svg",
     name: "Umme Kulsum Suraia",
     role: "Designer",
     details: "Brings ideas to life with stunning UI/UX.",
   },
   {
-    img: "https://pagedone.io/asset/uploads/1696238665.png",
-    name: "Al Imran Tonmoy",
-    role: "Project Manager",
-    details: "Manages projects with efficiency and precision.",
+    img: "https://cdn.prod.website-files.com/5e51c674258ffe10d286d30a/5e5352709588e06bd47b75e0_peep-19.svg",
+    name: "Md Munna Mia",
+    role: "Developer",
+    details: "Focuses on creating idiot-proof applications.",
   },
 ];
 

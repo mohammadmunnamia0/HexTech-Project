@@ -7,9 +7,10 @@ import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 
 export default function HireUs() {
-  const [selectedService, setSelectedService] = useState("Website Development");
+  const [selectedService, setSelectedService] = useState("");
   const [selectedBudget, setSelectedBudget] = useState("More than 50K");
   const [customBudget, setCustomBudget] = useState(""); // State for custom budget
+  const [otherService, setOtherService] = useState(""); // State for other service
 
   const services = [
     "Website Development",
@@ -18,26 +19,18 @@ export default function HireUs() {
     "POS System Development",
     "Backend Development",
     "E-Commerce Web Development",
-    "Mobile App Development",
     "Custom Web Applications",
     "CMS Development (WordPress, Webflow, etc.)",
     "SEO Optimization & Digital Marketing",
-    "SaaS Development",
-    "API Development & Integration",
     "Cloud-Based Solutions",
     "Enterprise Software Development",
     "Landing Page Design & Development",
-    "Progressive Web Apps (PWA)",
     "Web Performance Optimization",
     "AI-Powered Web Solutions",
     "CRM Development & Integration",
     "Booking & Reservation Systems",
-    "Real-Time Chat & Messaging Systems",
-    "Social Media Platform Development",
     "Custom Dashboard & Analytics Development",
-    "Blockchain-Based Applications",
     "Cybersecurity & Web Protection Services",
-    "No-Code/Low-Code Development Solutions",
     "Website Maintenance & Support",
   ];
 
@@ -45,13 +38,7 @@ export default function HireUs() {
 
   return (
     <div className="min-h-screen flex flex-col container">
-      <div className="text-center">
-        {/* <p className=" font-bold text-center text-5xl font-serif">Hire Us</p> */}
-        {/* <img
-          className="w-52 h-52 mx-auto"
-          alt="Loading Animation"
-        /> */}
-      </div>
+      <div className="text-center"></div>
 
       <div className="grid md:grid-cols-2 gap-8 mt-14">
         {/* Left */}
@@ -78,11 +65,13 @@ export default function HireUs() {
               <FaDribbble />
             </Link>
           </div>
-          <div className="flex justify-center items-center ml-[270px] w-1/3  mt-2">
+
+          <div className="flex justify-center items-center ml-[270px] w-1/3 mt-2">
             <div>
-              <img className="flex justify-center items-center"
+              <img
+                className="flex justify-center items-center"
                 src="https://cdn-icons-gif.flaticon.com/16104/16104326.gif"
-                alt="ss"
+                alt="Loading"
               />
             </div>
           </div>
@@ -109,15 +98,34 @@ export default function HireUs() {
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm
-                     ${selectedService === service
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-700"
-                    }`}
-                  onClick={() => setSelectedService(service)}
+                     ${
+                       selectedService === service && !otherService
+                         ? "bg-black text-white"
+                         : "bg-gray-200 text-gray-700"
+                     }`}
+                  onClick={() => {
+                    setSelectedService(service);
+                    setOtherService(""); // Reset the other service input
+                  }}
                 >
                   {service}
                 </button>
               ))}
+            </div>
+
+            {/* Other Service Input */}
+            <div className="mt-4">
+              <label className="block mb-1 text-sm font-medium">Other</label>
+              <input
+                type="text"
+                placeholder="Enter your desired development"
+                value={otherService}
+                onChange={(e) => {
+                  setOtherService(e.target.value);
+                  setSelectedService(""); // Deselect predefined services
+                }}
+                className="w-full p-2 border border-gray-300 rounded-md outline-none focus:border-black"
+              />
             </div>
           </div>
 
@@ -129,9 +137,10 @@ export default function HireUs() {
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm 
-                    ${selectedBudget === budget
-                      ? "bg-black text-white"
-                      : "bg-gray-200 text-gray-700"
+                    ${
+                      selectedBudget === budget
+                        ? "bg-black text-white"
+                        : "bg-gray-200 text-gray-700"
                     }`}
                   onClick={() => {
                     setSelectedBudget(budget);
@@ -145,7 +154,9 @@ export default function HireUs() {
 
             {/* Custom Budget Input */}
             <div className="mt-4">
-              <label className="block mb-1 text-sm font-medium">Custom Budget</label>
+              <label className="block mb-1 text-sm font-medium">
+                Custom Budget
+              </label>
               <input
                 type="text"
                 placeholder="Enter your budget (e.g. 200K)"
@@ -192,8 +203,7 @@ export default function HireUs() {
             {/* Project Details */}
             <div>
               <label className="block mb-1 text-sm font-medium">
-                Project Details{" "}
-                <span className="text-gray-500">(Optional)</span>
+                Project Details <span className="text-gray-500">(Optional)</span>
               </label>
               <textarea
                 placeholder="Your project description"
