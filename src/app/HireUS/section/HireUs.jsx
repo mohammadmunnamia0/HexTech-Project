@@ -7,28 +7,48 @@ import { BsDiscord } from "react-icons/bs";
 import { IoLogoGithub } from "react-icons/io";
 
 export default function HireUs() {
-  const [selectedService, setSelectedService] = useState("Website development");
+  const [selectedService, setSelectedService] = useState("Website Development");
   const [selectedBudget, setSelectedBudget] = useState("More than 50K");
+  const [customBudget, setCustomBudget] = useState(""); // State for custom budget
 
   const services = [
-    "Website development",
-    "UI-UX Design",
-    "Portfolio",
-    "POS system",
-    "Backend development",
-    "E-Commerce Web development",
-    "Mobile App development",
-
+    "Website Development",
+    "UI/UX Design",
+    "Portfolio Websites",
+    "POS System Development",
+    "Backend Development",
+    "E-Commerce Web Development",
+    "Mobile App Development",
+    "Custom Web Applications",
+    "CMS Development (WordPress, Webflow, etc.)",
+    "SEO Optimization & Digital Marketing",
+    "SaaS Development",
+    "API Development & Integration",
+    "Cloud-Based Solutions",
+    "Enterprise Software Development",
+    "Landing Page Design & Development",
+    "Progressive Web Apps (PWA)",
+    "Web Performance Optimization",
+    "AI-Powered Web Solutions",
+    "CRM Development & Integration",
+    "Booking & Reservation Systems",
+    "Real-Time Chat & Messaging Systems",
+    "Social Media Platform Development",
+    "Custom Dashboard & Analytics Development",
+    "Blockchain-Based Applications",
+    "Cybersecurity & Web Protection Services",
+    "No-Code/Low-Code Development Solutions",
+    "Website Maintenance & Support",
   ];
-  const budgets = ["2K - 10K", "10K - 50K", "More than 50K"];
+
+  const budgets = ["50K - 70K", "100K - 150K", "More than 250K"];
 
   return (
-    <div className="min-h-screen flex flex-col p-8 container">
+    <div className="min-h-screen flex flex-col container">
       <div className="text-center">
-        <p className=" font-bold text-center text-5xl font-serif">Hire Us</p>
+        {/* <p className=" font-bold text-center text-5xl font-serif">Hire Us</p> */}
         {/* <img
           className="w-52 h-52 mx-auto"
-
           alt="Loading Animation"
         /> */}
       </div>
@@ -104,7 +124,7 @@ export default function HireUs() {
           {/* Budget Selection */}
           <div className="mt-6">
             <h3 className="text-lg font-semibold mb-2">Your Budget</h3>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {budgets.map((budget, index) => (
                 <button
                   key={index}
@@ -113,11 +133,29 @@ export default function HireUs() {
                       ? "bg-black text-white"
                       : "bg-gray-200 text-gray-700"
                     }`}
-                  onClick={() => setSelectedBudget(budget)}
+                  onClick={() => {
+                    setSelectedBudget(budget);
+                    setCustomBudget(""); // Reset custom budget input
+                  }}
                 >
                   {budget}
                 </button>
               ))}
+            </div>
+
+            {/* Custom Budget Input */}
+            <div className="mt-4">
+              <label className="block mb-1 text-sm font-medium">Custom Budget</label>
+              <input
+                type="text"
+                placeholder="Enter your budget (e.g. 200K)"
+                value={customBudget}
+                onChange={(e) => {
+                  setCustomBudget(e.target.value);
+                  setSelectedBudget(""); // Deselect predefined budgets
+                }}
+                className="w-full p-2 border border-gray-300 rounded-md outline-none focus:border-black"
+              />
             </div>
           </div>
 

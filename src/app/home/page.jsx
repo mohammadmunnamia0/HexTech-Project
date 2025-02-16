@@ -8,6 +8,7 @@ import TechStack from './sections/TechStack';
 import ContactPage from './sections/ContactUs';
 import Stats from './sections/stats';
 import WhyUs from '../HireUS/WhyUs/WhyUs';
+import Clients from './sections/Clients';
 
 const HomePage = () => {
     return (
@@ -19,7 +20,6 @@ const HomePage = () => {
             <Project />
             <WhyUs></WhyUs>
             <TechStack />
-            {/* <HireUs /> */}
             <Clients/>
             <ClientReview />
             <Blog />

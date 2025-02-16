@@ -30,7 +30,7 @@ export default function AvailablePositions() {
   ];
 
   return (
-    <div className="container mx-auto py-24 px-9 sm:px-6 lg:px-8 mb-8">
+    <div className="container lg:mt-32 mt-10 py-24 px-9 sm:px-6 lg:px-8 mb-8 ">
       <div className="mt-7">
         <div className="text-center">
           <div className="text-4xl font-bold p-6">
@@ -92,7 +92,7 @@ export default function AvailablePositions() {
                   ></path>
                 </svg>
               </span>
-              <span className="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease p-4">
+              <span className="absolute flex items-center justify-center w-full h-full text-gray-500 transition-all duration-300 transform group-hover:translate-x-full ease p-4">
                 Send Your Cv
               </span>
               <span className="relative invisible p-4">Send Your Cv</span>
