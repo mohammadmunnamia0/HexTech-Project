@@ -3,7 +3,7 @@ import { FiSend } from "react-icons/fi";
 import { LuSparkles } from "react-icons/lu";
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-white overflow-hidden mt-10">
+    <div id="contact" className="min-h-screen bg-white overflow-hidden mt-10">
       <div className="relative min-h-screen flex items-center justify-center p-4">
         <div className="relative w-full max-w-6xl mx-auto">
           {/* Main content container */}
