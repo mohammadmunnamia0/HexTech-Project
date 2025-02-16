@@ -1,8 +1,8 @@
-import ComingSoonPage from './components/coming-soon/Page'
+import HomePage from './home/page';
 const Home = () => {
   return (
     <section>
-      <ComingSoonPage />
+     <HomePage/>
     </section>
   );
 }

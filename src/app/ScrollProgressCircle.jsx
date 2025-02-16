@@ -50,7 +50,7 @@ export default function ScrollProgressCircle() {
                 />
 
                 {/* Percentage Text */}
-                <text className="font-thin" x="50" y="55" textAnchor="middle" fontSize="24" fill="#ffffff">
+                <text className="font-thin" x="50" y="58" textAnchor="middle" fontSize="24" fill="#ffffff">
                     {Math.round(scrollProgress)}%
                 </text>
             </svg>

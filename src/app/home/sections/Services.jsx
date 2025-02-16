@@ -16,7 +16,7 @@ const Services = () => {
             title: "Web Development",
             icon: <Image className="mt-10 h-16 w-16" src={icon1} alt="Icon" />,
             description:
-                "Building responsive, fast, and scalable websites using modern web technologies like React, Next.js, and Laravel.",
+                "Building responsive, fast, and scalable websites using modern web technologies.",
         },
         {
             id: "02",
@@ -57,83 +57,75 @@ const Services = () => {
 
 
     return (
-        <section className="p-5 lg:mt-12 mt-6 container">
-            <div className="lg:w-[85%] mx-auto">
-                <div className="flex flex-col justify-center text-center ">
+        <section className="lg:mt-32 mt-10 container">
+            <div className="mx-auto">
+                <div className="flex flex-col justify-center text-center">
                     <p
-                        className="text-2xl font-semibold"
-                        data-aos="fade-up"
-                        data-aos-duration="2000"
+                        className="text-xl font-semibold"
+                    // data-aos="fade-up"
+                    // data-aos-duration="2000"
                     >
                         Popular Services
                     </p>
                     <h1
-                        className="text-3xl font-semibold md:text-4xl lg:mb-16"
-                        data-aos="fade-up"
-                        data-aos-duration="2000"
+                        className="text-4xl mt-2 font-semibold md:text-4xl lg:mb-16 mb-10"
+                    // data-aos="fade-up"
+                    // data-aos-duration="2000"
                     >
                         Services We Provide
                     </h1>
                 </div>
-                <div className="w-full">
-                    <div
-                        className="flex justify-center w-full px-4"
-                        data-aos="fade-up"
-                        data-aos-duration="2000"
-                    >
-                        <div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {services.map((service) => (
-                                    <div
-                                        key={service.id}
-                                        className="relative h-[300px] p-8 border rounded-lg border-[#2222226c] bg-[#ffffff] group overflow-hidden"
-                                    >
-                                        {/* The normal card */}
-                                        <div className="relative z-10 flex items-center justify-between mt-5 transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:pointer-events-none">
-                                            <div>
-                                                <p className="text-lg font-semibold">{service.id}</p>
-                                                <p className="text-2xl font-semibold">
-                                                    {service.title}
-                                                </p>
-                                                {service.icon}
-                                            </div>
-
-
-                                            <p className="flex items-center px-4 h-[150px] text-2xl rounded-3xl bg-[#f6f2ed] group-hover:bg-white transition-all duration-500 ease-in-out">
-                                                <FiArrowUpRight className="transition-colors duration-500 ease-in-out group-hover:text-blue-600" />
-                                            </p>
-                                        </div>
-
-
-                                        {/* The bigger card (hidden by default, shown on hover) */}
-                                        <div className="absolute inset-0 z-20 w-[110%] h-[110%] bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out">
-                                            <div className="px-6 text-white mt-12">
-                                                <div className="flex items-center lg:gap-5">
-                                                    <p className="text-2xl font-semibold w-[60%]">
-                                                        {service.title}
-                                                    </p>
-                                                    <p className="flex text-7xl font-extrabold text-white tracking-normal">
-                                                        <span className="text-stroke-white relative animate-stroke">
-                                                            {service.id[0]}
-                                                        </span>
-                                                        <span className="text-stroke-white relative animate-stroke">
-                                                            {service.id[1]}
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                                <p className="mt-5 w-[90%]">{service.description}</p>
-                                                <Link href='/HireUS'>
-                                                    <button className="relative flex items-center mt-8 font-bold text-white transition-all duration-300 cursor-pointer hover:translate-x-3 hover:text-gray-300">
-                                                        Hire Us{" "}
-                                                        <MdOutlineChevronRight className="mt-1 text-xl transition-transform duration-300 ease-in-out" />
-                                                    </button>
-                                                </Link>
-                                            </div>
-                                        </div>
+                <div
+                    className="flex justify-center"
+                // data-aos="fade-up"
+                // data-aos-duration="2000"
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {services.map((service) => (
+                            <div
+                                key={service.id}
+                                className="relative h-[300px] lg:px-8 px-4 border border-[#2222226c] bg-[#ffffff] group overflow-hidden"
+                            >
+                                {/* The normal card */}
+                                <div className="relative z-10 flex items-center justify-between transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:pointer-events-none h-full">
+                                    <div className="w-full">
+                                        <p className="text-xl font-semibold text-right">{service.id}</p>
+                                        <p className="text-2xl font-semibold">
+                                            {service.title}
+                                        </p>
+                                        {service.icon}
                                     </div>
-                                ))}
+                                </div>
+
+
+                                {/* The bigger card (hidden by default, shown on hover) */}
+                                <div className="absolute inset-0 z-20 flex items-center text-white lg:p-8 p-4 bg-black transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-in-out">
+                                    <div className="w-full">
+                                        <div className="flex justify-between">
+                                            <p className="flex text-4xl font-extrabold text-white tracking-normal">
+                                                <span className="text-stroke-white relative animate-stroke">
+                                                    {service.id[0]}
+                                                </span>
+                                                <span className="text-stroke-white relative animate-stroke">
+                                                    {service.id[1]}
+                                                </span>
+                                            </p>
+                                            <p className="text-2xl font-semibold text-right">
+                                                {service.title}
+                                            </p>
+
+                                        </div>
+                                        <p className="mt-5">{service.description}</p>
+                                        <Link href='/HireUS'>
+                                            <button className="relative flex items-center mt-8 font-bold text-white transition-all duration-300 cursor-pointer hover:translate-x-3 hover:text-gray-300">
+                                                Hire Us
+                                                <MdOutlineChevronRight className=" text-xl transition-transform duration-300 ease-in-out" />
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

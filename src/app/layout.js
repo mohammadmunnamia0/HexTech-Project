@@ -25,7 +25,7 @@ const RootLayout = ({ children }) => {
   
   return (
     <html lang="en">
-      <Loading>
+      {/* <Loading> */}
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
@@ -35,7 +35,7 @@ const RootLayout = ({ children }) => {
           <main>{children}</main>
           <Footer />
         </body>
-      </Loading>
+      {/* </Loading> */}
     </html>
 
   );
