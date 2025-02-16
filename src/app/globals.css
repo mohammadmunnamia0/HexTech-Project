@@ -74,6 +74,24 @@
 }
 /* hero section swiper end */
 
+/* unUsed Design hire Us section css start */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* unUsed Design hire Us section css end */
+
 /* Swiper pagination styles */
 .swiper-pagination {
   position: relative !important;
