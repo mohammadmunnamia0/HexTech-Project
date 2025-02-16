@@ -46,7 +46,7 @@ const ClientReview = () => {
     ];
 
     return (
-        <section className="bg-black">
+        <section className="bg-black lg:mt-32 mt-10">
             <div className="container lg:flex mx-auto py-16 px-4 sm:px-6 lg:px-8 ">
                 <div className="text-center lg:p-12 text-white">
                     <span className="text-sm  font-medium block text-left mb-4">Testimonial</span>

@@ -6,7 +6,6 @@ import Blog from './sections/Blog';
 import Project from './sections/Project';
 import TechStack from './sections/TechStack';
 import ContactPage from './sections/ContactUs';
-import HireUs from './../HireUS/section/HireUs';
 
 const HomePage = () => {
     return (

@@ -57,7 +57,7 @@ const Services = () => {
 
 
     return (
-        <section className="lg:mt-20 mt-10 container">
+        <section className="lg:mt-32 mt-10 container">
             <div className="mx-auto">
                 <div className="flex flex-col justify-center text-center">
                     <p

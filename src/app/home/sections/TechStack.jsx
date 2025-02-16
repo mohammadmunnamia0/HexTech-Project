@@ -47,8 +47,8 @@ function TechStack() {
   ];
 
   return (
-    <div className="min-h-screen bg-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-white lg:mt-32 mt-10">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Technology Stack</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-16">
