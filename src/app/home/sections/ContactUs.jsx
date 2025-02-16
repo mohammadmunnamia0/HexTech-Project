@@ -1,31 +1,78 @@
+'use client'
+import { useState } from "react";
+import emailjs from "emailjs-com";
 import { IoMailOutline } from "react-icons/io5";
 import { FiSend } from "react-icons/fi";
 import { LuSparkles } from "react-icons/lu";
+
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState(""); // for showing the status message
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  console.log(formData);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send the email using EmailJS
+    emailjs
+      .sendForm(
+        "service_e6xsbxm", // Replace with your EmailJS service ID
+        "template_68k2olk", // Replace with your EmailJS template ID
+        e.target,
+        "MFLg2Xg-fHwvvYuMW" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" }); // Clear form
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("Error sending message. Please try again.");
+        }
+      );
+  };
+
   return (
     <div id="contact" className="lg:mt-32 mt-10 bg-white overflow-hidden">
       <div className="relative min-h-screen flex items-center justify-center p-4">
         <div className="relative w-full max-w-6xl mx-auto">
-          {/* Main content container */}
           <div className="relative bg-white/50 backdrop-blur-lg rounded-[2.5rem] p-8 md:p-12 border border-white/20">
-            {/* Floating elements */}
-            <div className="lg:block hidden absolute lg:w-[60%] w-full lg:-top-12  left-1/2 -translate-x-1/2 bg-black text-white px-8 py-4 rounded-2xl ">
-              <h1 className="text-2xl lg:text-4xl font-bold flex items-center gap-4 ">
+            <div className="lg:block hidden absolute lg:w-[60%] w-full lg:-top-12 left-1/2 -translate-x-1/2 bg-black text-white px-8 py-4 rounded-2xl ">
+              <h1 className="text-2xl lg:text-4xl font-bold flex items-center gap-4">
                 Let's Create Something Amazing
-                <LuSparkles className="w-6 h-6 mt-1"/>
+                <LuSparkles className="w-6 h-6 mt-1" />
               </h1>
             </div>
 
             <div className="mt-12 grid md:grid-cols-2 gap-12">
-              {/* Left side - Floating cards */}
               <div className="space-y-8">
                 <div className="relative bg-white rounded-2xl p-6 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                   <div className="absolute -top-4 -left-4 bg-black text-white p-3 rounded-xl shadow-lg">
                     <IoMailOutline className="w-5 h-5" />
                   </div>
                   <h2 className="text-xl font-semibold mb-2 pl-8">Get in Touch</h2>
-                  <p className="text-gray-600">Ready to start your next project? We're here to turn your ideas into reality.</p>
+                  <p className="text-gray-600">
+                    Ready to start your next project? We're here to turn your
+                    ideas into reality.
+                  </p>
                 </div>
+
                 <div className="relative bg-black text-white rounded-2xl p-8 shadow-lg transform hover:-translate-y-1 transition-transform duration-300">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -58,40 +105,52 @@ export default function ContactPage() {
 
               {/* Right side - Floating form */}
               <div className="relative bg-white rounded-2xl p-8 shadow-lg">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
+                  {/* Name Field */}
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-gray-900">Your Name</label>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
-                        placeholder="John Doe"
-                      />
-                    </div>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
+                      placeholder="John Doe"
+                      required
+                    />
                   </div>
 
+                  {/* Email Field */}
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-gray-900">Email Address</label>
-                    <div className="relative">
-                      <input
-                        type="email"
-                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
-                        placeholder="john@example.com"
-                      />
-                    </div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
+                      placeholder="john@example.com"
+                      required
+                      pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                      title="Please enter a valid Gmail address (e.g. yourname@gmail.com)"
+                    />
                   </div>
 
+                  {/* Message Field */}
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-gray-900">Your Message</label>
-                    <div className="relative">
-                      <textarea
-                        rows={4}
-                        className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
-                        placeholder="Tell us about your project..."
-                      />
-                    </div>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="w-full px-4 py-3 rounded-xl bg-gray-50 border-2 border-gray-200 focus:border-black focus:ring-0 transition-colors duration-200"
+                      placeholder="Tell us about your project..."
+                      required
+                    />
                   </div>
 
+                  {/* Submit Button */}
                   <button
                     type="submit"
                     className="w-full bg-black text-white py-4 px-6 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors duration-200"
@@ -100,6 +159,7 @@ export default function ContactPage() {
                     <FiSend className="w-4 h-4" />
                   </button>
                 </form>
+                {status && <p className="mt-4 text-center text-white">{status}</p>}
 
                 {/* Decorative elements */}
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-100 rounded-full"></div>
