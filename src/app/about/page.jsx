@@ -9,8 +9,8 @@ const page = () => {
     <div>
       <OurTeam/>
       <MVO/>
-      <Gallery></Gallery>
-      <Gallery2></Gallery2>
+      {/* <Gallery></Gallery>
+      <Gallery2></Gallery2> */}
     </div>
   );
 };
