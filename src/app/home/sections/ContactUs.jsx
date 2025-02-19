@@ -4,6 +4,8 @@ import emailjs from "emailjs-com";
 import { IoMailOutline } from "react-icons/io5";
 import { FiSend } from "react-icons/fi";
 import { LuSparkles } from "react-icons/lu";
+import officeImg from "@/assets/contact/office.jpg";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,7 +23,6 @@ export default function ContactPage() {
     });
   };
 
-  console.log(formData);
 
   // Handle form submission
   const handleSubmit = (e) => {
@@ -30,15 +31,15 @@ export default function ContactPage() {
     // Send the email using EmailJS
     emailjs
       .sendForm(
-        "service_e6xsbxm", // Replace with your EmailJS service ID
-        "template_68k2olk", // Replace with your EmailJS template ID
+        "service_e6xsbxm",
+        "template_68k2olk",
         e.target,
-        "MFLg2Xg-fHwvvYuMW" // Replace with your EmailJS user ID
+        "MFLg2Xg-fHwvvYuMW"
       )
       .then(
         (result) => {
           console.log(result.text);
-          setStatus("Message sent successfully!");
+          setStatus("Message sent successfully!",);
           setFormData({ name: "", email: "", message: "" }); // Clear form
         },
         (error) => {
@@ -88,15 +89,18 @@ export default function ContactPage() {
                     <div className="w-full h-px bg-white/20"></div>
 
                     <div className="relative overflow-hidden rounded-xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2301&q=80"
+                      <Image
+                        src={officeImg}
                         alt="Office"
                         className="w-full h-48 object-cover"
+                        height={1000}
+                        width={1000}
+
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 text-white">
                         <p className="font-medium">Visit our office</p>
-                        <p className="text-sm text-gray-300">123 Innovation Hub, Tech City</p>
+                        <p className="text-sm text-gray-300">Uttara Sector 10, Dhaka, Bangladesh</p>
                       </div>
                     </div>
                   </div>
