@@ -8,23 +8,15 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname(); // Get current route
     const [activeLink, setActiveLink] = useState(pathname);
-    const router = useRouter();
 
-    const handleScroll = () => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-        } else {
-            router.push("/#contact");
-        }
-    };
     const navItems = [
-        { name: "Home", href: "/home" },
-        { name: "Hire Us", href: "/HireUS" },
-        { name: "About Us", href: "/about" },
-        { name: "Careers", href: "/Career" },
-        { name: "Blog", href: "/Blog" },
+        { id: 1, name: "Home", href: "/home" },
+        { id: 2, name: "Hire Us", href: "/HireUS" },
+        { id: 3, name: "About Us", href: "/about" },
+        { id: 4, name: "Careers", href: "/Career" },
+        { id: 5, name: "Blog", href: "/Blog" }
     ];
+
     return (
         <nav className="fixed w-full lg:h-[80px] bg-white/90 backdrop-blur-sm z-50 shadow-sm ">
             <div className="lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +29,7 @@ const Navbar = () => {
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-center space-x-8">
                             {navItems.map((item) => (
-                                <div className="relative group" key={item.name}>
+                                <div className="relative group" key={item.id}>
                                     <Link
                                         href={item.href}
                                         className={`text-gray-700 transition-all duration-700 border-b-2 ${activeLink === item.href
@@ -54,17 +46,6 @@ const Navbar = () => {
                                     ></span>
                                 </div>
                             ))}
-                            {/* <button
-                                onClick={handleScroll}
-                                className="relative inline-block text-base group"
-                            >
-                                <span className="relative z-10 block px-4 py-2 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border border-gray-900 rounded-md group-hover:text-white">
-                                    <span className="absolute inset-0 w-full h-full px-4 py-2 rounded-md bg-gray-50"></span>
-                                    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                                    <span className="relative">Let's Talk</span>
-                                </span>
-                                <span className="absolute bottom-0 right-0 w-full h-10 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-md group-hover:mb-0 group-hover:mr-0"></span>
-                            </button> */}
                             <Link href='/HireUS'>
                                 <button
                                     className="relative inline-block text-base group"
