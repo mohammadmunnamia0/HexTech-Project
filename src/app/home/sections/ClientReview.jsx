@@ -17,35 +17,35 @@ const ClientReview = () => {
             id: 1,
             clientName: "Rakib",
             clientImage: image1,
-            review: "I used to dread doing my taxes every year, but pagedone has made the process so much simpler and stress-free.",
+            review: "I used to dread doing my taxes every year, but page done has made the process so much simpler and stress-free.",
             role: "Product Designer"
         },
         {
             id: 2,
             clientName: "Tonmoy",
             clientImage: image2,
-            review: "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            review: "The user interface of this page done is so intuitive, I was able to start using it without any guidance.",
             role: "CEO"
         },
         {
             id: 3,
             clientName: "Linkon",
             clientImage: image1,
-            review: "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            review: "The user interface of this page done is so intuitive, I was able to start using it without any guidance.",
             role: "CEO"
         },
         {
             id: 4,
             clientName: "Munna",
             clientImage: image2,
-            review: "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            review: "The user interface of this page done is so intuitive, I was able to start using it without any guidance.",
             role: "CEO"
         },
         {
             id: 5,
             clientName: "Fahim",
             clientImage: image1,
-            review: "The user interface of this pagedone is so intuitive, I was able to start using it without any guidance.",
+            review: "The user interface of this page done is so intuitive, I was able to start using it without any guidance.",
             role: "CEO"
         }
     ];

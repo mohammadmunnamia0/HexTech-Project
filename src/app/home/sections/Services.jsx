@@ -8,48 +8,47 @@ import { MdOutlineChevronRight } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 
-const imageClassName = "mt-10 h-16 w-16";
 const Services = () => {
     const services = [
         {
             id: "01",
             title: "Web Development",
-            icon: <Image className={imageClassName} src={icon1} alt="Icon" />,
+            icon: icon1,
             description:
                 "Building responsive, fast, and scalable websites using modern web technologies.",
         },
         {
             id: "02",
             title: "App Development",
-            icon: <Image className={imageClassName} src={icon2} alt="Icon" />,
+            icon: icon2,
             description:
                 "Creating powerful, user-friendly mobile and desktop applications with cross-platform support.",
         },
         {
             id: "03",
             title: "Custom Software Development",
-            icon: <Image className={imageClassName} src={icon3} alt="Icon" />,
+            icon: icon3,
             description:
                 "Developing tailored software solutions to meet business needs, ensuring high performance and security.",
         },
         {
             id: "04",
             title: "WordPress Development",
-            icon: <Image className={imageClassName} src={icon4} alt="Icon" />,
+            icon: icon4,
             description:
                 "Designing and optimizing WordPress websites, from custom themes to plugin development and SEO.",
         },
         {
             id: "05",
             title: "SQA Management",
-            icon: <Image className={imageClassName} src={icon5} alt="Icon" />,
+            icon: icon5,
             description:
                 "Ensuring software quality through automated and manual testing, performance optimization, and bug tracking.",
         },
         {
             id: "06",
             title: "Software Consultancy",
-            icon: <Image className={imageClassName} src={icon6} alt="Icon" />,
+            icon: icon6,
             description:
                 "Providing expert guidance on software architecture, development strategies, and technology selection.",
         },
@@ -87,7 +86,7 @@ const Services = () => {
                                         <p className="text-2xl font-semibold">
                                             {service.title}
                                         </p>
-                                        {service.icon}
+                                        <Image className="mt-10 h-16 w-16" src={service.icon} alt={service.title} />
                                     </div>
                                 </div>
 

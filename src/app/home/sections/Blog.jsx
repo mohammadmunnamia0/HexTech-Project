@@ -5,6 +5,7 @@ import { FaRegUser } from "react-icons/fa";
 import { IoBookmarksOutline } from "react-icons/io5";
 import { BsCalendar3 } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
+import Link from "next/link";
 
 const blogPosts = [
   {
@@ -16,13 +17,7 @@ const blogPosts = [
     author: "Sarah Johnson",
     date: "April 15, 2024",
     readTime: "5 min read",
-    imageUrl: (
-      <Image
-        src={img}
-        alt="img"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-    ),
+    imageUrl: img,
     category: "Technology",
     featured: true,
   },
@@ -34,13 +29,7 @@ const blogPosts = [
     author: "Michael Chen",
     date: "April 14, 2024",
     readTime: "4 min read",
-    imageUrl: (
-      <Image
-        src={img}
-        alt="img"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-    ),
+    imageUrl: img,
     category: "Business",
     featured: false,
   },
@@ -52,13 +41,7 @@ const blogPosts = [
     author: "Emma Davis",
     date: "April 13, 2024",
     readTime: "6 min read",
-    imageUrl: (
-      <Image
-        src={img}
-        alt="img"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-    ),
+    imageUrl: img,
     category: "Leadership",
     featured: false,
   },
@@ -66,12 +49,13 @@ const blogPosts = [
 
 
 export default function Blog() {
+  const featuredPosts = blogPosts.filter((post) => post.featured);
+  const recentPosts = blogPosts.filter((post) => !post.featured);
   return (
     <div className="min-h-screen bg-white lg:mt-32 mt-10">
       <div className="container mx-auto px-4">
         {/* Featured Article */}
-        {blogPosts
-          .filter((post) => post.featured)
+        {featuredPosts
           .map((post) => (
             <div key={post.id} className="mb-20">
               <div className="relative bg-gradient-to-r from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-2xl">
@@ -87,9 +71,9 @@ export default function Blog() {
                         Featured
                       </span>
                     </div>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
                       {post.title}
-                    </h2>
+                    </h1>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                       {post.excerpt}
                     </p>
@@ -103,7 +87,7 @@ export default function Blog() {
                         <span>{post.date}</span>
                       </div>
                     </div>
-                    <a href="#_" class="self-start relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium text-white bg-gray-800 group">
+                    <Link href="#_" class="self-start relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium text-white bg-gray-800 group">
                       <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-black group-hover:w-56 group-hover:h-56"></span>
                       <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
                       <span class="relative flex">Read Article
@@ -112,12 +96,15 @@ export default function Blog() {
                           className="mt-1 group-hover:translate-x-1 transition-transform"
                         />
                       </span>
-                    </a>
-
+                    </Link>
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <div className="aspect-[4/3]">
-                      {post.imageUrl}
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent" />
                     </div>
                   </div>
@@ -131,8 +118,7 @@ export default function Blog() {
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-gray-900">Recent Articles</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {blogPosts
-              .filter((post) => !post.featured)
+            {recentPosts
               .map((post) => (
                 <div
                   key={post.id}
@@ -141,7 +127,11 @@ export default function Blog() {
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-2/5 relative">
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent z-10" />
-                      {post.imageUrl}
+                      <Image
+                        src={post.imageUrl}
+                        alt="img"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />  
                       <span className="absolute lg:top-4 left-4 z-20 bg-black text-white px-3 py-1 rounded-full text-sm font-semibold">
                         {post.category}
                       </span>
@@ -166,7 +156,7 @@ export default function Blog() {
                             <span>{post.readTime}</span>
                           </div>
                         </div>
-                        <a
+                        <Link
                           href="#"
                           className="group inline-flex items-center gap-2 text-gray-900 font-semibold transition-all duration-300 hover:text-black"
                         >
@@ -175,7 +165,7 @@ export default function Blog() {
                             size={18}
                             className="transform group-hover:translate-x-2 transition-transform mt-1"
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
