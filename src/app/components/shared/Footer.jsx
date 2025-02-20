@@ -9,6 +9,21 @@ import { IoLogoGithub } from "react-icons/io";
 import { LuPhone, LuLinkedin, LuMapPin } from "react-icons/lu";
 import { GoArrowRight } from "react-icons/go";
 
+const quickLink = [
+  { id: 1, key: 'Home' },
+  { id: 2, key: 'About' },
+  { id: 3, key: 'Services' },
+  { id: 4, key: 'Portfolio' },
+  { id: 5, key: 'Blog' }
+];
+const services = [
+  { id: 1, key: 'Web Development' },
+  { id: 2, key: 'Mobile Apps' },
+  { id: 3, key: 'UI/UX Design' },
+  { id: 4, key: 'Cloud Solutions' },
+  { id: 5, key: 'DevOps' }
+];
+
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 mt-10">
@@ -46,14 +61,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
             <ul className="space-y-4">
-              {['Home', 'About', 'Services', 'Portfolio', 'Blog'].map((item) => (
-                <li key={item}>
+              {quickLink.map((item) => (
+                <li key={item.id}>
                   <Link
                     href="#"
                     className="group flex items-center text-gray-400 hover:text-white transition-colors"
                   >
                     <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {item}
+                    {item.key}
                   </Link>
                 </li>
               ))}
@@ -64,20 +79,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">Services</h3>
             <ul className="space-y-4">
-              {[
-                'Web Development',
-                'Mobile Apps',
-                'UI/UX Design',
-                'Cloud Solutions',
-                'DevOps'
-              ].map((service) => (
-                <li key={service}>
+              {services.map((service) => (
+                <li key={service.id}>
                   <Link
                     href="#"
                     className="group flex items-center text-gray-400 hover:text-white transition-colors"
                   >
                     <GoArrowRight className="h-4 w-4 mr-2 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {service}
+                    {service.key}
                   </Link>
                 </li>
               ))}

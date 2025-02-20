@@ -1,11 +1,14 @@
 import { MdOutlineShoppingCart, MdOutlineTerminal, MdOutlineBarChart, MdOutlineInventory } from "react-icons/md";
 import { GoArrowRight } from "react-icons/go";
+import Link from "next/link";
 
+const productIcon = "h-6 w-6 text-white"
 const products = [
     {
+        id: 1,
         title: "E-commerce Platform",
         description: "A powerful and scalable e-commerce solution for modern businesses.",
-        icon: <MdOutlineShoppingCart className="h-6 w-6 text-white" />,
+        icon: <MdOutlineShoppingCart className={productIcon} />,
         features: [
             "Multi-vendor marketplace",
             "Real-time inventory tracking",
@@ -13,9 +16,10 @@ const products = [
         ]
     },
     {
+        id: 2,
         title: "POS System",
         description: "Streamlined point-of-sale system with comprehensive management tools.",
-        icon: <MdOutlineTerminal className="h-6 w-6 text-white" />,
+        icon: <MdOutlineTerminal className={productIcon} />,
         features: [
             "Offline functionality",
             "Hardware integration",
@@ -23,9 +27,10 @@ const products = [
         ]
     },
     {
+        id: 3,
         title: "CRM Solution",
         description: "AI-powered CRM for improving customer relationships and boosting sales.",
-        icon: <MdOutlineBarChart className="h-6 w-6 text-white" />,
+        icon: <MdOutlineBarChart className={productIcon} />,
         features: [
             "Automated email campaigns",
             "Lead scoring & qualification",
@@ -33,9 +38,10 @@ const products = [
         ]
     },
     {
+        id: 4,
         title: "Inventory System",
         description: "An advanced inventory management system with predictive analytics.",
-        icon: <MdOutlineInventory className="h-6 w-6 text-white" />,
+        icon: <MdOutlineInventory className={productIcon} />,
         features: [
             "Barcode & RFID integration",
             "Stock alerts & forecasting",
@@ -50,7 +56,7 @@ export default function Project() {
             <div className="w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header - Right aligned */}
                 <div className="text-right mx-auto mb-16 w-full">
-                    <h2 className="text-4xl font-bold mb-2">Enterprise-Grade Solutions</h2>
+                    <h1 className="text-4xl font-bold mb-2">Enterprise-Grade Solutions</h1>
                     <p className="text-xl text-gray-400">
                         Battle-tested, scalable products built for modern businesses
                     </p>
@@ -58,16 +64,16 @@ export default function Project() {
 
                 {/* Products Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {products.map((product, idx) => (
-                        <div key={idx} className="group relative bg-black rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                    {products.map((product) => (
+                        <div key={product.id} className="group relative bg-black rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
                             <div className="p-8 relative flex-grow">
                                 <div className="h-12 w-12 bg-gray-700/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                                     {product.icon}
                                 </div>
-                                <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
+                                <h2 className="text-xl font-semibold text-white mb-3">{product.title}</h2>
                                 <p className="text-gray-400 mb-4">{product.description}</p>
                                 <ul className="space-y-3 text-sm text-gray-300">
-                                    {product.features.map((feature, featureIdx) => (
+                                    {product.features.map((feature,featureIdx) => (
                                         <li key={featureIdx} className="flex items-center">
                                             <GoArrowRight className="h-4 w-4 mr-2 text-white" />
                                             {feature}
@@ -75,10 +81,10 @@ export default function Project() {
                                     ))}
                                 </ul>
                             </div>
-                            <a href="#contact" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
+                            <Link href="#contact" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
                                 <span class="w-48 h-48 rounded rotate-[-40deg] bg-gray-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                                 <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Contact Us</span>
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

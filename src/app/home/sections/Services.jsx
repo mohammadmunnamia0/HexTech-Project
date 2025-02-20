@@ -5,7 +5,6 @@ import icon4 from "@/assets/icon/icon4.gif";
 import icon5 from "@/assets/icon/icon5.gif";
 import icon6 from "@/assets/icon/icon6.gif";
 import { MdOutlineChevronRight } from "react-icons/md";
-import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,42 +13,42 @@ const Services = () => {
         {
             id: "01",
             title: "Web Development",
-            icon: <Image className="mt-10 h-16 w-16" src={icon1} alt="Icon" />,
+            icon: icon1,
             description:
                 "Building responsive, fast, and scalable websites using modern web technologies.",
         },
         {
             id: "02",
             title: "App Development",
-            icon: <Image className="mt-10 h-16 w-16" src={icon2} alt="Icon" />,
+            icon: icon2,
             description:
                 "Creating powerful, user-friendly mobile and desktop applications with cross-platform support.",
         },
         {
             id: "03",
             title: "Custom Software Development",
-            icon: <Image className="mt-10 h-16 w-16" src={icon3} alt="Icon" />,
+            icon: icon3,
             description:
                 "Developing tailored software solutions to meet business needs, ensuring high performance and security.",
         },
         {
             id: "04",
             title: "WordPress Development",
-            icon: <Image className="mt-10 h-16 w-16" src={icon4} alt="Icon" />,
+            icon: icon4,
             description:
                 "Designing and optimizing WordPress websites, from custom themes to plugin development and SEO.",
         },
         {
             id: "05",
             title: "SQA Management",
-            icon: <Image className="mt-10 h-16 w-16" src={icon5} alt="Icon" />,
+            icon: icon5,
             description:
                 "Ensuring software quality through automated and manual testing, performance optimization, and bug tracking.",
         },
         {
             id: "06",
             title: "Software Consultancy",
-            icon: <Image className="mt-10 h-16 w-16" src={icon6} alt="Icon" />,
+            icon: icon6,
             description:
                 "Providing expert guidance on software architecture, development strategies, and technology selection.",
         },
@@ -62,23 +61,17 @@ const Services = () => {
                 <div className="flex flex-col justify-center text-center">
                     <p
                         className="text-xl font-semibold"
-                    // data-aos="fade-up"
-                    // data-aos-duration="2000"
                     >
                         Popular Services
                     </p>
                     <h1
                         className="text-4xl mt-2 font-semibold md:text-4xl lg:mb-16 mb-10"
-                    // data-aos="fade-up"
-                    // data-aos-duration="2000"
                     >
                         Services We Provide
                     </h1>
                 </div>
                 <div
                     className="flex justify-center"
-                // data-aos="fade-up"
-                // data-aos-duration="2000"
                 >
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service) => (
@@ -93,7 +86,7 @@ const Services = () => {
                                         <p className="text-2xl font-semibold">
                                             {service.title}
                                         </p>
-                                        {service.icon}
+                                        <Image className="mt-10 h-16 w-16" src={service.icon} alt={service.title} />
                                     </div>
                                 </div>
 
