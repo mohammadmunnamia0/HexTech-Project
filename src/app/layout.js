@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from './components/shared/Navbar';
+import Footer from "./components/shared/Footer";
+import LenisSmoothScroll from './LenisSmoothScroll';
+import Loading from "./loading";
+import ScrollProgressCircle from "./ScrollProgressCircle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,14 +21,24 @@ export const metadata = {
   description: "Return Hex is a software company specializing in cutting-edge technology solutions. They provide innovative software development, AI, and cloud services to businesses worldwide",
 };
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
+  
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <Loading>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <LenisSmoothScroll />
+          <Navbar />
+          <ScrollProgressCircle />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </Loading>
     </html>
+
   );
 }
+
+export default RootLayout

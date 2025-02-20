@@ -1,8 +1,10 @@
-import CommingSoonPage from '../app/components/comming-soon/Page'
-export default function Home() {
+import HomePage from './home/page';
+const Home = () => {
   return (
     <section>
-      <CommingSoonPage />
+     <HomePage/>
     </section>
   );
 }
+
+export default Home
