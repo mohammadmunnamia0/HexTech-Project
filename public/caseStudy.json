@@ -110,14 +110,7 @@
       "icon": "bar-chart",
       "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       "category": "Data Engineering"
-    },
-    {
-      "id": 15,
-      "title": "The Metaverse and Software Development",
-      "description": "Exploring how the emerging metaverse is creating new paradigms for software development and digital experiences.",
-      "icon": "globe",
-      "imageUrl": "https://images.unsplash.com/photo-1614729375564-c7f0816a5324?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      "category": "Future Tech"
     }
+
   ]
   
