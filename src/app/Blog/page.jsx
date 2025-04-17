@@ -1,12 +1,11 @@
-
-import { generateDynamicMetadataHandler } from "@/helpers/generateDynamicMetadataHandler";
-import Blog from "@/app/blog/section/Blog";
+import Blog from "@/app/Blog/section/Blog";
 import DynamicHero from "@/app/components/shared/DynamicHero";
+import { generateDynamicMetadataHandler } from "@/helpers/generateDynamicMetadataHandler";
 
 // Dynamic metadata generation function
 export async function generateMetadata() {
   const page_slug = "/blog";
-  const url = 'http://localhost:3000/';
+  const url = "http://localhost:3000/";
   const redirect_url = `${url}/${page_slug}`;
 
   const result = await generateDynamicMetadataHandler({

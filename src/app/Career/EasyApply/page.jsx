@@ -1,8 +1,8 @@
 "use client";
 
+import EasyApply from "@/app/Career/EasyApply/EasyApply";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import EasyApply from "@/app/career/EasyApply/EasyApply";
 
 export default function EasyApplyPage() {
   const searchParams = useSearchParams();

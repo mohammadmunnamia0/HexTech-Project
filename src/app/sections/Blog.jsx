@@ -1,4 +1,4 @@
-import { blogPosts } from "@/app/blog/blogData";
+import { blogPosts } from "@/app/Blog/blogData";
 import Image from "next/image";
 import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
