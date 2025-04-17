@@ -12,6 +12,7 @@ const tw = {
         foreground: "var(--foreground)",
         primary: "#1a1a1a",
         secondary: "c",
+        Custom_bg:"#131c2a",
       },
     },
     container: {

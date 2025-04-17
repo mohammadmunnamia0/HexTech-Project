@@ -1,31 +1,31 @@
-import WhyUs from "../HireUS/WhyUs/WhyUs";
-import Blog from "./sections/Blog";
-import ClientReview from "./sections/ClientReview";
-import Clients from "./sections/Clients";
-import ContactPage from "./sections/ContactUs";
-import DevelopmentProcess from "./sections/DevelopmentProcess";
-import Hero from "./sections/Hero";
-import Project from "./sections/Project";
-import Services from "./sections/Services";
-import Stats from "./sections/stats";
-import TechStack from "./sections/TechStack";
+import CaseStudySection from "@/app/case-study/CaseStudySection";
+import Blog from "@/app/home/sections/Blog";
+import ClientReview from "@/app/home/sections/ClientReview";
+import Clients from "@/app/home/sections/Clients";
+import ContactUs from "@/app/home/sections/ContactUs";
+import DevelopmentProcess from "@/app/home/sections/DevelopmentProcess";
+import Hero from "@/app/home/sections/Hero";
+import Project from "@/app/home/sections/Project";
+import Services from "@/app/home/sections/Services";
+import TechStack from "@/app/home/sections/TechStack";
+import WhyUS from "@/app/sections/WhyUs";
+import AOSProvider from "@/lib/providers/AOSProvider";
 
 const HomePage = () => {
   return (
-    <>
+    <AOSProvider>
       <Hero />
-      <Stats></Stats>
       <Services />
       <DevelopmentProcess />
       <Project />
-      <WhyUs></WhyUs>
+      <WhyUS />
       <TechStack />
-      <Clients />
       <ClientReview />
       <Blog />
-      <ContactPage />
-    </>
+      <CaseStudySection />
+      <Clients />
+      <ContactUs />
+    </AOSProvider>
   );
 };
-
 export default HomePage;

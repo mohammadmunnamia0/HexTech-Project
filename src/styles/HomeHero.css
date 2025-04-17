@@ -1,0 +1,59 @@
+/* hero section swiper start */
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  height: 12px;
+  width: 12px;
+  opacity: 1 !important;
+  border: 1px solid #a0a0a0;
+  margin-top: 700px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #a0a0a0 !important;
+  border: 1px solid #a0a0a0;
+  transform: scale(1.4);
+  margin-top: 700px;
+}
+
+
+@keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .swiper-slide-active .scale-110 {
+    transform: scale(1);
+  }
+  
+  /* Custom Pagination Styles */
+  .hero-slider .swiper-pagination {
+    bottom: 5rem !important;
+  }
+  
+  .hero-slider .swiper-pagination-bullet {
+    width: 2.5rem;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0;
+    margin: 0 0.5rem !important;
+    transition: all 0.3s ease;
+    opacity: 1;
+  }
+  
+  .hero-slider .swiper-pagination-bullet-active {
+    background: #fff;
+    width: 2.5rem;
+  }
+  /* hero section swiper end */

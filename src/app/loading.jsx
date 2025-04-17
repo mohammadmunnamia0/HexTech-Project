@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import '@/styles/Loader.css';
 
 // Custom Loading Component
 export default function Loading({ children }) {
@@ -10,83 +11,72 @@ export default function Loading({ children }) {
   const [contentVisible, setContentVisible] = useState(false);
   const [isClient, setIsClient] = useState(false); // Track if we're on the client
   const pathname = usePathname();
+  const formatPathname = (path) => {
+    if (path === "/") return "Home Page";
+    return path
+      .replace("/", "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  };
 
+  const loadingText = formatPathname(pathname);
+  console.log(loadingText)
 
   useEffect(() => {
-    setIsClient(true); // Make sure we only run client-side logic after hydration
+    setIsClient(true);
   }, []);
-
 
   useEffect(() => {
     if (isClient) {
-      // Reset states properly without overriding the animation
       setLoading(true);
       setAnimateOut(false);
       setContentVisible(false);
 
-
       const loaderTimeout = setTimeout(() => {
-        setAnimateOut(true); // Start fade-out animation
-
+        setAnimateOut(true);
 
         setTimeout(() => {
-          setLoading(false); // Fully remove loader
-          setContentVisible(true); // Show content
-        }, 1000); // Exit animation duration (matches the transition time)
-      }, 1500); // Default loading duration
-
+          setLoading(false);
+          setContentVisible(true);
+        }, 1000);
+      }, 1500);
 
       return () => clearTimeout(loaderTimeout);
     }
-  }, [pathname, isClient]); // Runs every time the path changes (after hydration)
-
+  }, [pathname, isClient]);
 
   if (!isClient) {
-    return null; // Return null during SSR to avoid hydration mismatch
+    return null;
   }
-
 
   return (
     <div className="relative w-full overflow-auto">
-      {" "}
-      {/* Ensure scroll is possible here */}
       {/* Loader */}
       {loading && (
         <div
-          className={`fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#000] text-white z-[1000] transition-all duration-1000 ${
-            animateOut
-              ? "-translate-y-full opacity-0"
-              : "translate-y-0 opacity-100"
-          }`}
+          className={`fixed top-0 left-0 w-full h-full flex items-center justify-center bg-[#1a1919] text-white z-[999] transition-all duration-1000 ${animateOut ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+            }`}
         >
-          <div className="loader-container">
-            <div className="body">
-              <span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+          <div className="lg:text-5xl md:text-2xl text-lg font-thin uppercase tracking-[20px] flex text-white">
+            {loadingText.split("").map((char, index) => (
+              <span
+                key={index}
+                className="opacity-0 loading-animation"
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                }}
+              >
+                {char}
               </span>
-              <div className="base">
-                <span></span>
-                <div className="face"></div>
-              </div>
-            </div>
-            <div className="longfazers">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div className="mt-28 loading"></div>
+            ))}
           </div>
         </div>
       )}
+
       {/* Page Content */}
       <div
-        className={`transition-opacity duration-1000 ${
-          contentVisible ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`transition-opacity duration-1000 ${contentVisible ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
       >
         {children}
       </div>

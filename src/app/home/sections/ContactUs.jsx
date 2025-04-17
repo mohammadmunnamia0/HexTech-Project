@@ -1,11 +1,11 @@
-'use client'
-import { useState } from "react";
-import emailjs from "emailjs-com";
-import { IoMailOutline } from "react-icons/io5";
-import { FiSend } from "react-icons/fi";
-import { LuSparkles } from "react-icons/lu";
+"use client";
 import officeImg from "@/assets/contact/office.jpg";
+import emailjs from "emailjs-com";
 import Image from "next/image";
+import { useState } from "react";
+import { FiSend } from "react-icons/fi";
+import { IoMailOutline } from "react-icons/io5";
+import { LuSparkles } from "react-icons/lu";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -23,7 +23,6 @@ export default function ContactPage() {
     });
   };
 
-
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +38,7 @@ export default function ContactPage() {
       .then(
         (result) => {
           console.log(result.text);
-          setStatus("Message sent successfully!",);
+          setStatus("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" }); // Clear form
         },
         (error) => {
@@ -67,7 +66,9 @@ export default function ContactPage() {
                   <div className="absolute -top-4 -left-4 bg-black text-white p-3 rounded-xl shadow-lg">
                     <IoMailOutline className="w-5 h-5" />
                   </div>
-                  <h2 className="text-xl font-semibold mb-2 pl-8">Get in Touch</h2>
+                  <h2 className="text-xl font-semibold mb-2 pl-8">
+                    Get in Touch
+                  </h2>
                   <p className="text-gray-600">
                     Ready to start your next project? We're here to turn your
                     ideas into reality.
@@ -82,7 +83,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-gray-400 text-sm">Email us at</p>
-                        <p className="font-medium">returnhex.official@gmail.com</p>
+                        <p className="font-medium">
+                          HexTech.official@gmail.com
+                        </p>
                       </div>
                     </div>
 
@@ -95,12 +98,13 @@ export default function ContactPage() {
                         className="w-full h-48 object-cover"
                         height={1000}
                         width={1000}
-
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 text-white">
                         <p className="font-medium">Visit our office</p>
-                        <p className="text-sm text-gray-300">Uttara Sector 10, Dhaka, Bangladesh</p>
+                        <p className="text-sm text-gray-300">
+                          Uttara Sector 10, Dhaka, Bangladesh
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -112,7 +116,9 @@ export default function ContactPage() {
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {/* Name Field */}
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-900">Your Name</label>
+                    <label className="text-sm font-medium text-gray-900">
+                      Your Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -126,7 +132,9 @@ export default function ContactPage() {
 
                   {/* Email Field */}
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-900">Email Address</label>
+                    <label className="text-sm font-medium text-gray-900">
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -142,7 +150,9 @@ export default function ContactPage() {
 
                   {/* Message Field */}
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-900">Your Message</label>
+                    <label className="text-sm font-medium text-gray-900">
+                      Your Message
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -163,7 +173,9 @@ export default function ContactPage() {
                     <FiSend className="w-4 h-4" />
                   </button>
                 </form>
-                {status && <p className="mt-4 text-center text-white">{status}</p>}
+                {status && (
+                  <p className="mt-4 text-center text-white">{status}</p>
+                )}
 
                 {/* Decorative elements */}
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-100 rounded-full"></div>

@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "AI-Powered Development Tools",
+      "description": "How AI coding assistants are transforming software development workflows and increasing developer productivity by up to 40%.",
+      "icon": "brain",
+      "imageUrl": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "id": 2,
+      "title": "The Rise of WebAssembly",
+      "description": "Exploring how WebAssembly is enabling high-performance applications in the browser and expanding beyond web environments.",
+      "icon": "globe",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Web Technologies"
+    },
+    {
+      "id": 3,
+      "title": "Quantum Computing Applications",
+      "description": "Case studies of early quantum computing applications in cryptography, drug discovery, and optimization problems.",
+      "icon": "cpu",
+      "imageUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Quantum Computing"
+    },
+    {
+      "id": 4,
+      "title": "Microservices to Micro-frontends",
+      "description": "How companies are extending microservice architecture principles to frontend development for more scalable applications.",
+      "icon": "layers",
+      "imageUrl": "https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Architecture"
+    },
+    {
+      "id": 5,
+      "title": "Edge Computing Revolution",
+      "description": "Real-world implementations of edge computing that are reducing latency and enabling new IoT use cases.",
+      "icon": "server",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Infrastructure"
+    },
+    {
+      "id": 6,
+      "title": "Blockchain Beyond Cryptocurrency",
+      "description": "Innovative applications of blockchain technology in supply chain, healthcare, and digital identity management.",
+      "icon": "database",
+      "imageUrl": "https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Blockchain"
+    },
+    {
+      "id": 7,
+      "title": "Zero-Trust Security Models",
+      "description": "How organizations are implementing zero-trust architecture to improve security posture in distributed environments.",
+      "icon": "lock",
+      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": 8,
+      "title": "Serverless Computing at Scale",
+      "description": "Case studies of enterprises adopting serverless architectures and the impact on development velocity and operational costs.",
+      "icon": "cloud",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Cloud Computing"
+    },
+    {
+      "id": 9,
+      "title": "Progressive Web Apps in 2025",
+      "description": "How PWAs are evolving with new web capabilities and becoming the default approach for cross-platform applications.",
+      "icon": "smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Mobile Development"
+    },
+    {
+      "id": 10,
+      "title": "Low-Code/No-Code Platforms",
+      "description": "Enterprise adoption of low-code platforms and their integration with professional development workflows.",
+      "icon": "zap",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Development Tools"
+    },
+    {
+      "id": 11,
+      "title": "The Future of Remote Collaboration",
+      "description": "Next-generation tools and practices for distributed software teams, including VR/AR workspaces and AI-facilitated communication.",
+      "icon": "wifi",
+      "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Future of Work"
+    },
+    {
+      "id": 12,
+      "title": "Sustainable Software Engineering",
+      "description": "How companies are measuring and reducing the carbon footprint of their software systems through efficient coding practices.",
+      "icon": "rocket",
+      "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba53b0998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Sustainability"
+    },
+    {
+      "id": 13,
+      "title": "DevSecOps Evolution",
+      "description": "Case studies of organizations successfully integrating security throughout the development lifecycle with automated tools and practices.",
+      "icon": "code",
+      "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "DevOps"
+    },
+    {
+      "id": 14,
+      "title": "Data Mesh Architecture",
+      "description": "How enterprises are implementing data mesh to decentralize data ownership and improve analytics capabilities.",
+      "icon": "bar-chart",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Data Engineering"
+    },
+    {
+      "id": 15,
+      "title": "The Metaverse and Software Development",
+      "description": "Exploring how the emerging metaverse is creating new paradigms for software development and digital experiences.",
+      "icon": "globe",
+      "imageUrl": "https://images.unsplash.com/photo-1614729375564-c7f0816a5324?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      "category": "Future Tech"
+    }
+  ]
+  

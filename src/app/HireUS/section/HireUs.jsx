@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaDribbble } from "react-icons/fa6";
+import { useState } from "react";
 import { BsDiscord } from "react-icons/bs";
+import { FaDribbble, FaFacebookF, FaTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 
 export default function HireUs() {
@@ -44,7 +44,7 @@ export default function HireUs() {
         {/* Left */}
         <div>
           <h2 className="text-lg font-semibold">Contacts</h2>
-          <p className="text-gray-700">returnhex@gmail.com | +880188888888</p>
+          <p className="text-gray-700">HexTech@gmail.com | +880188888888</p>
 
           <h2 className="text-lg font-semibold mt-6">Follow Us</h2>
 
@@ -203,7 +203,8 @@ export default function HireUs() {
             {/* Project Details */}
             <div>
               <label className="block mb-1 text-sm font-medium">
-                Project Details <span className="text-gray-500">(Optional)</span>
+                Project Details{" "}
+                <span className="text-gray-500">(Optional)</span>
               </label>
               <textarea
                 placeholder="Your project description"
