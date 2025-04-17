@@ -1,4 +1,4 @@
-# Return Hex Portfolio Web-Project
+# Hex-Tech Portfolio Web-Project
 ## Getting Started
 
 First, run the development server:
