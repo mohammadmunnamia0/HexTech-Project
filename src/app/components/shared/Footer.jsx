@@ -141,22 +141,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* CompanyName */}
-      <div className="-mt-20 bg-Custom_bg flex items-center ">
-        <div className="text-center">
-          <h1
-            className="text-[50px] sm:text-[100px] md:text-[120px] lg:text-[250px] mt-5 lg:mt-0 font-semibold text-transparent bg-clip-text animate-gradient tracking-[0.075em]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, black, gray, white, gray, black)",
-              backgroundSize: "200% 100%",
-            }}
-          >
-            Hex-Tech
-          </h1>
-        </div>
-      </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 overflow-hidden">
         <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
